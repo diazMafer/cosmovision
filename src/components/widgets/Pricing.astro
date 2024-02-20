@@ -24,9 +24,9 @@ const {
     <div class="grid grid-cols-3 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {
         prices &&
-          prices.map(({ title, subtitle, price, period, items, callToAction, hasRibbon = false, ribbonTitle }) => (
+          prices.map(({ title, subtitle, megas, period, items, callToAction, hasRibbon = false, ribbonTitle }) => (
             <div class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
-              {price && period && (
+              {megas && period && (
                 <div class="rounded-lg backdrop-blur border border-gray-200 dark:border-gray-700 bg-white dark:bg-slate-900 shadow px-6 py-8 flex w-full max-w-sm flex-col justify-between text-center">
                   {hasRibbon && ribbonTitle && (
                     <div class="absolute right-[-5px] 2xl:right-[-8px] rtl:right-auto rtl:left-[-8px] rtl:2xl:left-[-10px] top-[-5px] 2xl:top-[-10px] z-[1] h-[100px] w-[100px] overflow-hidden text-right">
@@ -37,13 +37,12 @@ const {
                   )}
                   <div class="px-2 py-0">
                     {title && (
-                      <h3 class="text-center text-xl font-semibold uppercase leading-6 tracking-wider mb-2">{title}</h3>
+                      <h3 class="conection display:inline-block text-xs font-semibold leading-6 tracking-wider mb-2">{title}</h3>
                     )}
-                    {subtitle && <p class="font-light sm:text-lg text-gray-600 dark:text-slate-400">{subtitle}</p>}
+                    {subtitle && <p class="font-bold sm:text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>}
                     <div class="my-8">
                       <div class="flex items-center justify-center text-center mb-1">
-                        <span class="text-5xl">$</span>
-                        <span class="text-6xl font-extrabold">{price}</span>
+                        <span class="text-6xl font-extrabold">{megas}</span>
                       </div>
                       <span class="text-base leading-6 lowercase text-gray-600 dark:text-slate-400">{period}</span>
                     </div>
@@ -68,7 +67,7 @@ const {
                       {typeof callToAction === 'string' ? (
                         <Fragment set:html={callToAction} />
                       ) : (
-                        callToAction && callToAction.href && <Button {...hasRibbon ? { variant:'primary' } : {}} {...callToAction}/>
+                        callToAction && callToAction.href && <Button {...hasRibbon ? { variant:'pricing' } : {variant:'pricing'}} {...callToAction}/>
                       )}
                     </div>
                   )}

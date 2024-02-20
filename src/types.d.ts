@@ -140,7 +140,7 @@ export interface Price {
   title?: string;
   subtitle?: string;
   description?: string;
-  price?: number;
+  megas?: number;
   period?: string;
   items?: Array<Item>;
   callToAction?: CallToAction;
