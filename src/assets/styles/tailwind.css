@@ -37,6 +37,10 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+  .shadow {
+    background-color: rgb(247, 247, 245);
+    border: 2px solid rgb(240, 240, 233);
+  }
 }
 
 @layer components {
@@ -50,6 +54,11 @@
     hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 
     dark:border-slate-500 dark:hover:bg-slate-800 
     dark:hover:border-slate-800 cursor-pointer;
+  }
+
+  .shadow-g {
+    @apply
+    shadow
   }
 
   .conection{
