@@ -3,6 +3,8 @@
 	display: flex;
 	overflow-x: auto;
 	justify-content: space-evenly;
+	border-radius: 50px;
+	background-color: #fff7ee;
 }
 
 .panels {
@@ -21,22 +23,25 @@
 
 .tab {
 	display: flex;
+	justify-content: center;
 	white-space: nowrap;
 	cursor: pointer;
-	color: white;
+	color: black;
 	padding: 1rem;
-	background-color: teal;
-	border: 1px solid cyan;
 
 	&:hover {
-		color: black;
-		background-color: cyan;
+		color: #ffff;
+		background-color: #FF7500;
+		font-weight: bold;
+		border-radius: 50px;
 	}
 }
 
 .tab-selector:checked ~ .tab {
-	color: black;
-	background: turquoise;
+	color: #ffff;
+	background: #FF7500;
+	font-weight: bold;
+	border-radius: 50px;
 }
 
 .radio {
