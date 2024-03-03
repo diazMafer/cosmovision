@@ -32,9 +32,8 @@
   }
   .conection-padding {
     padding: 5px 30px;
-    
   }
-  .bg-pricing { 
+  .bg-pricingC { 
     background-color: #fef9f6;
   }
   .text-page {
@@ -46,6 +45,15 @@
   .shadow {
     background-color: rgb(247, 247, 245);
     border: 2px solid rgb(240, 240, 233);
+  }
+  .border-pricing {
+    border: none;
+  }
+  .border-pricing-600 {
+    border: 3px solid #ff7e1e;
+  }
+  .shadow-pricing {
+    box-shadow: 0px 4px 8px 0px rgba(255, 173, 101, 0.2), 0 6px 20px 0 rgba(255, 173, 101, 0.19);
   }
 }
 
@@ -64,8 +72,15 @@
 
   .shadow-g {
     @apply
-    shadow
+    shadow;
   }
+
+  .pricing-card {
+    @apply
+    border-pricing shadow-pricing hover:border-pricing-600;
+  }
+
+  
 
   .conection{
     @apply
@@ -77,9 +92,7 @@
     text-conection;
   }
 
-  .container-pricing{
-    @apply bg-pricing;
-  }
+  
 
   .btn-primary {
     @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
