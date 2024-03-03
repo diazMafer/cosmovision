@@ -28,16 +28,9 @@
 	cursor: pointer;
 	color: black;
 	padding: 1rem;
-
-	&:hover {
-		color: #ffff;
-		background-color: #FF7500;
-		font-weight: bold;
-		border-radius: 50px;
-	}
 }
 
-.tab-selector:checked ~ .tab {
+input[type=radio]:checked ~ .tab{
 	color: #ffff;
 	background: #FF7500;
 	font-weight: bold;

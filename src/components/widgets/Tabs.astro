@@ -12,9 +12,7 @@ let inlineStyles = '';
 	Object.entries(Astro.slots).forEach(([name]) => {
 		if (name.startsWith('tab')) {
 			index += 1;
-
 			tabs.push(name);
-
 			classes.push(
 				String(
 					`.${styles.tabs}:has(.${styles.radio}-${index}:checked) ` +
