@@ -1,0 +1,51 @@
+.tab-bar {
+	margin: 0 20vw;
+	display: flex;
+	overflow-x: auto;
+	justify-content: space-evenly;
+}
+
+.panels {
+	position: relative;
+}
+
+.panel {
+	display: none;
+	width: 100%;
+
+	.tabs:has(.tallest) & {
+		display: inline-block;
+		visibility: hidden;
+	}
+}
+
+.tab {
+	display: flex;
+	white-space: nowrap;
+	cursor: pointer;
+	color: white;
+	padding: 1rem;
+	background-color: teal;
+	border: 1px solid cyan;
+
+	&:hover {
+		color: black;
+		background-color: cyan;
+	}
+}
+
+.tab-selector:checked ~ .tab {
+	color: black;
+	background: turquoise;
+}
+
+.radio {
+	// visually hidden
+	position: absolute;
+	width: 0px;
+	height: 0px;
+	overflow: hidden;
+	clip: rect(0 0 0 0);
+	clip-path: inset(50%);
+	white-space: nowrap;
+}

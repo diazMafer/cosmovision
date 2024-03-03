@@ -4,6 +4,7 @@ import HeroText from '~/components/widgets/HeroText.astro';
 import Prices from '~/components/widgets/Pricing.astro';
 import Features3 from '~/components/widgets/Features3.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Tabs from '~/components/widgets/Tabs.astro';
 
 const metadata = {
   title: 'Pricing',
@@ -16,102 +17,145 @@ const metadata = {
   <HeroText
     tagline="Cable + Internet"
     subtitle="Explora nuestros planes de cable + internet, diseñados para adaptarse a cada necesidad y estilo de vida."
-    >
+  >
     <Fragment slot="title">
       Selecciona el plan 
-      <span class="text-accent dark:text-white highlight"> perfecto para ti
+      <span class="text-accent dark:text-white highlight"> perfecto para ti </span>
     </Fragment>
   </HeroText>
 
-  <!-- Pricing Widget ******************* -->
+  <!-- Tabs Widget ******************* -->
+  <Tabs>
+    <Fragment slot='tab-1'>Combo</Fragment>
+    <Fragment slot='tab-2'>Sin Internet</Fragment>
 
-  <Prices
-    prices={[
-      {
-        title: 'Conexión Fibra Optica',
-        subtitle: 'PLAN MERCURIO',
-        megas: 30,
-        period: 'MEGAS',
-        items: [
-          {
-            description: 'Ideal para navegación basica',
+    <Prices
+      slot='panel-1'
+      prices={[
+        {
+          title: 'Conexión Fibra Optica',
+          subtitle: 'PLAN MERCURIO',
+          megas: 30,
+          period: 'MEGAS',
+          items: [
+            { description: 'Ideal para navegación basica', },
+            { description: 'Aenean ac nunc dolor tristique', },
+            { description: 'Cras scelerisque accumsan lib', },
+            { description: 'In hac habitasse', },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Q219/mes',
+            icon: 'tabler:circle-arrow-right',
+            href: '#',
           },
-          {
-            description: 'Aenean ac nunc dolor tristique',
-          },
-          {
-            description: 'Cras scelerisque accumsan lib',
-          },
-          {
-            description: 'In hac habitasse',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Q219/mes',
-          icon: 'tabler:circle-arrow-right',
-          href: '#',
         },
-      },
-      {
-        title: 'Conexión Fibra Optica',
-        subtitle: 'PLAN SATURNO',
-        megas: 50,
-        period: 'MEGAS',
-        items: [
-          {
-            description: 'Proin vel laoreet',
+        {
+          title: 'Conexión Fibra Optica',
+          subtitle: 'PLAN SATURNO',
+          megas: 50,
+          period: 'MEGAS',
+          items: [
+            { description: 'Proin vel laoreet', },
+            { description: 'Ut efficitur habitasse egestas', },
+            { description: 'Volutpat hac curabitur', },
+            { description: 'Pellentesque blandit ut nibh', },
+            { description: 'Donec fringilla sem', },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Q249/mes',
+            href: '#',
+            icon: 'tabler:circle-arrow-right'
           },
-          {
-            description: 'Ut efficitur habitasse egestas',
-          },
-          {
-            description: 'Volutpat hac curabitur',
-          },
-          {
-            description: 'Pellentesque blandit ut nibh',
-          },
-          {
-            description: 'Donec fringilla sem',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Q249/mes',
-          href: '#',
-          icon: 'tabler:circle-arrow-right'
+          hasRibbon: true,
+          ribbonTitle: 'popular',
         },
-        hasRibbon: true,
-        ribbonTitle: 'popular',
-      },
-      {
-        title: 'Conexión Fibra Optica',
-        subtitle: 'PLAN VENUS',
-        megas: 100,
-        period: 'MEGAS',
-        items: [
-          {
-            description: 'Curabitur suscipit risus',
+        {
+          title: 'Conexión Fibra Optica',
+          subtitle: 'PLAN VENUS',
+          megas: 100,
+          period: 'MEGAS',
+          items: [
+            { description: 'Curabitur suscipit risus', },
+            { description: 'Aliquam habitasse malesuada', },
+            { description: 'Suspendisse sit amet blandit', },
+            { description: 'Suspendisse auctor blandit dui', },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Q299/mes',
+            href: '#',
+            icon: 'tabler:circle-arrow-right'
           },
-          {
-            description: 'Aliquam habitasse malesuada',
-          },
-          {
-            description: 'Suspendisse sit amet blandit',
-          },
-          {
-            description: 'Suspendisse auctor blandit dui',
-          },
-        ],
-        callToAction: {
-          target: '_blank',
-          text: 'Q299/mes',
-          href: '#',
-          icon: 'tabler:circle-arrow-right'
         },
-      },
-    ]}
-  />
+      ]}
+    />
+
+    <Prices
+      slot='panel-2'
+      prices={[
+        {
+          title: 'Conexión Fibra Optica',
+          subtitle: 'PLAN MERCURIO',
+          megas: 10,
+          period: 'MEGAS',
+          items: [
+            { description: 'Ideal para navegación basica', },
+            { description: 'Aenean ac nunc dolor tristique', },
+            { description: 'Cras scelerisque accumsan lib', },
+            { description: 'In hac habitasse', },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Q219/mes',
+            icon: 'tabler:circle-arrow-right',
+            href: '#',
+          },
+        },
+        {
+          title: 'Conexión Fibra Optica',
+          subtitle: 'PLAN SATURNO',
+          megas: 15,
+          period: 'MEGAS',
+          items: [
+            { description: 'Proin vel laoreet', },
+            { description: 'Ut efficitur habitasse egestas', },
+            { description: 'Volutpat hac curabitur', },
+            { description: 'Pellentesque blandit ut nibh', },
+            { description: 'Donec fringilla sem', },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Q249/mes',
+            href: '#',
+            icon: 'tabler:circle-arrow-right'
+          },
+          hasRibbon: true,
+          ribbonTitle: 'popular',
+        },
+        {
+          title: 'Conexión Fibra Optica',
+          subtitle: 'PLAN VENUS',
+          megas: 20,
+          period: 'MEGAS',
+          items: [
+            { description: 'Curabitur suscipit risus', },
+            { description: 'Aliquam habitasse malesuada', },
+            { description: 'Suspendisse sit amet blandit', },
+            { description: 'Suspendisse auctor blandit dui', },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Q299/mes',
+            href: '#',
+            icon: 'tabler:circle-arrow-right'
+          },
+        },
+      ]}
+    />
+
+  </Tabs>
 
   <!-- Features3 Widget ************** -->
 
