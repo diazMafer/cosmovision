@@ -34,7 +34,7 @@
     width: fit-content;
   }
   .conection-padding {
-    padding: 5px 30px;
+    padding: 2px 15px;
   }
   .bg-pricingC { 
     background-color: #fef9f6;
@@ -52,6 +52,7 @@
     background-color: rgb(247, 247, 245);
     border: 2px solid rgb(240, 240, 233);
   }
+  
   .border-pricing {
     border: none;
   }
@@ -70,6 +71,9 @@
   }
   .shadow-pricing {
     box-shadow: 0px 4px 8px 0px rgba(255, 173, 101, 0.2), 0 6px 20px 0 rgba(255, 173, 101, 0.19);
+  }
+  .margin-top-20{
+    margin-top: 20px;
   }
 }
 
@@ -94,6 +98,11 @@
   .pricing-card {
     @apply
     border-pricing shadow-pricing padding-pricing hover:border-pricing-600;
+  }
+
+  .breaking-line { 
+    @apply
+    border-gray-200 border margin-top-20;
   }
 
   .conection{

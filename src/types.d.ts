@@ -144,6 +144,7 @@ export interface Price {
   period?: string;
   items?: Array<Item>;
   callToAction?: CallToAction;
+  image?: string | unknown;
   hasRibbon?: boolean;
   ribbonTitle?: string;
 }

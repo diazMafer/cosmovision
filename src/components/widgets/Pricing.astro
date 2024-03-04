@@ -3,7 +3,16 @@ import { Icon } from 'astro-icon/components';
 import Button from '~/components/ui/Button.astro';
 import Headline from '~/components/ui/Headline.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import type { Pricing } from '~/types';
+import Image from '~/components/common/Image.astro';
+import type { Pricing, Widget } from '~/types';
+
+interface Props extends Widget {
+  title?: string;
+  subtitle?: string;
+  tagline?: string;
+  prices?: any;
+
+}
 
 const {
   title = '',
@@ -24,7 +33,7 @@ const {
     <div class="grid grid-cols-3 gap-4 dark:text-white sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3">
       {
         prices &&
-          prices.map(({ title, subtitle, megas, period, items, callToAction, hasRibbon = false, ribbonTitle }) => (
+          prices.map(({ title, subtitle, megas, period, items, callToAction, image, hasRibbon = false, ribbonTitle }) => (
             <div class="col-span-3 mx-auto flex w-full sm:col-span-1 md:col-span-1 lg:col-span-1 xl:col-span-1">
               {megas && period && (
                 <div class="rounded-xl backdrop-blur border dark:border-gray-700 bg-white dark:bg-slate-900 pricing-card px-6 py-8 flex w-full max-w-sm flex-col justify-between text-center">
@@ -37,16 +46,43 @@ const {
                   )}
                   <div class="px-2 py-0">
                     {title && (
-                      <h3 class="conection display:inline-block text-xs font-semibold leading-6 mb-2">{title}</h3>
+                      <h3 class="conection display:inline-block text-xs font-semibold mb-2">{title}</h3>
                     )}
-                    {subtitle && <p class="font-bold sm:text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>}
-                    <div class="my-8">
-                      <div class="flex items-center justify-center text-center mb-1">
-                        <span class="text-9xl font-extrabold">{megas}</span>
+                  </div>
+                  <div class="flex items-center justify-center">
+                    { image && (
+                      <div class="basis-1/2">
+                          <div class="relative m-auto max-w-5xl">
+                            {typeof image === 'string' ? (
+                              <Fragment set:html={image} />
+                            ) : (
+                              <Image
+                                class="mx-auto rounded-md w-full"
+                                widths={[400, 768, 1024, 2040]}
+                                sizes="(max-width: 767px) 400px, (max-width: 1023px) 768px, (max-width: 2039px) 1024px, 2040px"
+                                loading="eager"
+                                width={200}
+                                height={200}
+                                {...image}
+                              />
+                            )}
+                          </div>
+                      </div> )
+                    }
+                    
+                    <div>
+                      {subtitle && <p class="font-bold sm:text-xl text-gray-600 dark:text-slate-400">{subtitle}</p>}
+                      <div class="my-8">
+                        <div class="flex items-center justify-center text-center mb-1">
+                          <span class="text-9xl font-extrabold">{megas}</span>
+                        </div>
+                        <span class="text-base leading-6 lowercase text-gray-600 dark:text-slate-400">{period}</span>
                       </div>
-                      <span class="text-base leading-6 lowercase text-gray-600 dark:text-slate-400">{period}</span>
                     </div>
-                    {callToAction && (
+                    
+                    
+                  </div>
+                  {callToAction && (
                     <div class={`flex justify-center`}>
                       {typeof callToAction === 'string' ? (
                         <Fragment set:html={callToAction} />
@@ -54,9 +90,8 @@ const {
                         callToAction && callToAction.href && <Button {...hasRibbon ? { variant:'pricing' } : {variant:'pricing'}} {...callToAction}/>
                       )}
                     </div>
-                    )}
-                    
-                  </div>
+                    <div class="breaking-line"/>
+                  )}
                   {items && (
                       <ul role="list" class="my-8 md:my-10 space-y-2 text-left">
                         {items.map(
