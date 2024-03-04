@@ -13,7 +13,10 @@
     background-color: var(--aw-color-bg-page);
   }
   .bg-pricing {
-    background-color: rgb(252, 255, 89);
+    background-color: #FF7500;
+  }
+  .btn-radius {
+    border-radius: 50px;
   }
   .bg-conection {
     background-color: #fce6d4;
@@ -42,12 +45,22 @@
   .text-muted {
     color: var(--aw-color-text-muted);
   }
+  .text-accent-blue {
+    color: var(--aw-color-accent-blue);
+  }
   .shadow {
     background-color: rgb(247, 247, 245);
     border: 2px solid rgb(240, 240, 233);
   }
   .border-pricing {
     border: none;
+  }
+  .text-9xl {
+    font-size: 4.75rem;
+    line-height: 1;
+  }
+  .padding-pricing {
+    padding-right: 20px;
   }
   .border-pricing-600 {
     border: 3px solid #ff7e1e;
@@ -77,10 +90,8 @@
 
   .pricing-card {
     @apply
-    border-pricing shadow-pricing hover:border-pricing-600;
+    border-pricing shadow-pricing padding-pricing hover:border-pricing-600;
   }
-
-  
 
   .conection{
     @apply
@@ -92,8 +103,6 @@
     text-conection;
   }
 
-  
-
   .btn-primary {
     @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
   }
@@ -103,8 +112,8 @@
   }
 
   .btn-pricing {
-    @apply text-black bg-pricing 
-    border-none rounded-xl pricing-width justify-start;
+    @apply text-white bg-pricing 
+    border-none btn-radius pricing-width justify-start;
   }
 
   .btn-tertiary {
