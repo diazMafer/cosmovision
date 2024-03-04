@@ -55,6 +55,9 @@
   .border-pricing {
     border: none;
   }
+  .max-h-20{
+    max-height: 5rem;
+  }
   .text-9xl {
     font-size: 4.75rem;
     line-height: 1;
