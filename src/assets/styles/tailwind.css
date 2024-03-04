@@ -56,6 +56,10 @@
   .border-pricing {
     border: none;
   }
+  .pricing-padding {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+  }
   .max-h-20{
     max-height: 5rem;
   }
@@ -116,7 +120,8 @@
   }
 
   .btn-primary {
-    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary dark:hover:border-secondary dark:hover:bg-secondary;
+    @apply btn font-semibold bg-primary text-white border-primary hover:bg-secondary hover:border-secondary hover:text-white dark:text-white dark:bg-primary dark:border-primary 
+    dark:hover:border-secondary dark:hover:bg-secondary;
   }
 
   .btn-secondary {
@@ -125,7 +130,7 @@
 
   .btn-pricing {
     @apply text-white bg-pricing 
-    border-none btn-radius pricing-width justify-start;
+    border-none btn-radius pricing-width pricing-padding;
   }
 
   .btn-tertiary {

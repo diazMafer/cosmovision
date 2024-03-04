@@ -34,63 +34,75 @@ const metadata = {
       prices={[
         {
           title: 'Fibra Optica',
-          subtitle: 'PLAN MERCURIO',
-          megas: 30,
-          period: 'MEGAS',
+          subtitle: 'PLAN MARTE',
+          megas: 25,
+          price: 199,
+          capacity: 'MEGAS',
+          period: ' /al mes',
           items: [
             { description: 'Ideal para navegación basica', },
             { description: 'Aenean ac nunc dolor tristique', },
-            { description: 'Cras scelerisque accumsan lib', },
-            { description: 'In hac habitasse', },
           ],
           callToAction: {
             target: '_blank',
-            text: 'Q219 por mes',
-            icon: 'tabler:circle-arrow-right',
+            text: 'Solicitar Plan',
             href: '#',
           },
-          image: { src: '~/assets/images/planet1.png', alt: 'Planeta' } ,
+          
+        },
+        {
+          title: 'Fibra Optica',
+          subtitle: 'PLAN MERCURIO',
+          megas: 30,
+          price: 219,
+          capacity: 'MEGAS',
+          period: ' /al mes',
+          items: [
+            { description: 'Ideal para navegación basica', },
+            { description: 'Aenean ac nunc dolor tristique', },
+          ],
+          callToAction: {
+            target: '_blank',
+            text: 'Solicitar Plan',
+            href: '#',
+          },
           
         },
         {
           title: 'Fibra Optica',
           subtitle: 'PLAN SATURNO',
           megas: 50,
-          period: 'MEGAS',
+          price: 249,
+          capacity: 'MEGAS',
+          period: ' /al mes',
           items: [
             { description: 'Proin vel laoreet', },
             { description: 'Ut efficitur habitasse egestas', },
-            { description: 'Volutpat hac curabitur', },
-            { description: 'Pellentesque blandit ut nibh', },
           ],
           callToAction: {
             target: '_blank',
-            text: 'Q249 por mes',
+            text: 'Solicitar Plan',
             href: '#',
-            icon: 'tabler:circle-arrow-right'
           },
           hasRibbon: true,
           ribbonTitle: 'Popular',
-          image: { src: '~/assets/images/planet2.png', alt: 'Planeta' } ,
         },
         {
           title: 'Fibra Optica',
           subtitle: 'PLAN VENUS',
           megas: 100,
-          period: 'MEGAS',
+          price: 299,
+          capacity: 'MEGAS',
+          period: ' /al mes',
           items: [
             { description: 'Curabitur suscipit risus', },
             { description: 'Aliquam habitasse malesuada', },
-            { description: 'Suspendisse sit amet blandit', },
-            { description: 'Suspendisse auctor blandit dui', },
           ],
           callToAction: {
             target: '_blank',
-            text: 'Q299 por mes',
+            text: 'Solicitar Plan',
             href: '#',
-            icon: 'tabler:circle-arrow-right'
           },
-          image: { src: '~/assets/images/planet3.png', alt: 'Planeta' } ,
         },
       ]}
     />
@@ -101,17 +113,17 @@ const metadata = {
         {
           title: 'Fibra Optica',
           subtitle: 'PLAN MERCURIO',
-          megas: 10,
-          period: 'MEGAS',
+          megas: 35,
+          capacity: 'MEGAS',
+          price: 190,
+          period: ' /al mes',
           items: [
             { description: 'Ideal para navegación basica', },
             { description: 'Aenean ac nunc dolor tristique', },
-            { description: 'Cras scelerisque accumsan lib', },
-            { description: 'In hac habitasse', },
           ],
           callToAction: {
             target: '_blank',
-            text: 'Q219/mes',
+            text: 'Solicitar Plan',
             icon: 'tabler:circle-arrow-right',
             href: '#',
           },
@@ -119,18 +131,17 @@ const metadata = {
         {
           title: 'Fibra Optica',
           subtitle: 'PLAN SATURNO',
-          megas: 15,
-          period: 'MEGAS',
+          megas: 60,
+          price: 230,
+          capacity: 'MEGAS',
+          period: ' /al mes',
           items: [
             { description: 'Proin vel laoreet', },
             { description: 'Ut efficitur habitasse egestas', },
-            { description: 'Volutpat hac curabitur', },
-            { description: 'Pellentesque blandit ut nibh', },
-            { description: 'Donec fringilla sem', },
           ],
           callToAction: {
             target: '_blank',
-            text: 'Q249/mes',
+            text: 'Solicitar Plan',
             href: '#',
             icon: 'tabler:circle-arrow-right'
           },
@@ -140,17 +151,17 @@ const metadata = {
         {
           title: 'Fibra Optica',
           subtitle: 'PLAN VENUS',
-          megas: 20,
-          period: 'MEGAS',
+          megas: 100,
+          capacity: 'MEGAS',
+          price: 249,
+          period: ' /al mes',
           items: [
             { description: 'Curabitur suscipit risus', },
             { description: 'Aliquam habitasse malesuada', },
-            { description: 'Suspendisse sit amet blandit', },
-            { description: 'Suspendisse auctor blandit dui', },
           ],
           callToAction: {
             target: '_blank',
-            text: 'Q299/mes',
+            text: 'Solicitar Plan',
             href: '#',
             icon: 'tabler:circle-arrow-right'
           },
@@ -163,39 +174,29 @@ const metadata = {
   <!-- Features3 Widget ************** -->
 
   <Features3
-    title="Price-related features"
-    subtitle="Discover the advantages of choosing our plans"
+    title="Conéctate al Universo"
+    subtitle="Descubre las ventajes al contratar nuestros planes "
     columns={2}
     items={[
       {
-        title: 'Tiered Pricing Plans',
-        description: 'Choose from a range of pricing plans designed to accommodate different budgets and requirements.',
-        icon: 'tabler:stairs',
+        title: 'Velocidad Luz',
+        description: 'Navega a velocidades que desafían las estrellas. Perfecto para streaming, juegos, y mucho más, sin interrupciones.',
+        icon: 'tabler:rocket',
       },
       {
-        title: 'Transparent Pricing',
-        description: 'Clearly displayed pricing details for each plan, with no hidden costs or unexpected charges.',
-        icon: 'tabler:flip-vertical',
+        title: 'Confiabilidad Galáctica',
+        description: ' Con nuestra tecnología avanzada, aseguramos una conexión estable que está contigo en todo momento, como la constante luz de las estrellas.',
+        icon: 'tabler:stars-filled',
       },
       {
-        title: 'Secure Payment Methods',
-        description: 'Secure payment gateways to protect your financial information during transactions.',
-        icon: 'tabler:shield-lock',
+        title: 'Soporte Tecnico',
+        description: 'Nuestros expertos están siempre listos para ayudarte, en cualquier momento y lugar, garantizando que tu experiencia sea siempre óptima.',
+        icon: 'tabler:tools',
       },
       {
-        title: 'Instant Access',
-        description: `Immediate access to your chosen plan's features and templates upon subscription.`,
-        icon: 'tabler:accessible',
-      },
-      {
-        title: 'Upgrade Value',
-        description: 'Upgrade to higher-tier plans to unlock more features and benefits for an enhanced experience.',
-        icon: 'tabler:chevrons-up',
-      },
-      {
-        title: '24H support',
-        description: 'Questions answered via live chat, email or phone, every calendar day.',
-        icon: 'tabler:headset',
+        title: 'Planes Flexibles',
+        description: `Adaptamos nuestras ofertas a tus necesidades. Con nosotros, tienes el poder de elegir y personalizar tu experiencia en línea.`,
+        icon: 'tabler:router',
       },
     ]}
     classes={{ container: 'max-w-5xl' }}

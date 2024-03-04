@@ -142,6 +142,8 @@ export interface Price {
   description?: string;
   megas?: number;
   period?: string;
+  price?: number;
+  capacity?: string;
   items?: Array<Item>;
   callToAction?: CallToAction;
   image?: string | unknown;
