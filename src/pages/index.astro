@@ -3,11 +3,11 @@ import Layout from '~/layouts/PageLayout.astro';
 
 import Hero from '~/components/widgets/Hero2.astro';
 import Brands from '~/components/widgets/Brands.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
 import Content from '~/components/widgets/Content.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
+import Announcement from '~/components/widgets/Announcement.astro';
 
 const metadata = {
   title: 'Cosmovision — Internet y Cable, todo conectado',
@@ -47,9 +47,6 @@ const metadata = {
     </Fragment>
   </Hero>
 
-  <!-- Note Widget ******************* -->
-  <Note />
-
   <!-- Brands Widget ******************* -->
 
   <Brands
@@ -79,34 +76,7 @@ const metadata = {
       
     ]}
   >
-  </Brands>
-
-  <!-- Call to action Cable ********** -->
-
-  <CallToAction
-    actions={[
-      {
-        variant: 'primary',
-        text: 'CONTRATAR',
-        href: 'https://github.com/onwidget/astrowind',
-        target: '_blank',
-        icon: '',
-      },
-    ]}
-    image={{ src: '~/assets/images/tv.png', alt: 'TV' }}
-  >
-    <Fragment slot="title">
-      Explora un universo
-      <br class="block sm:hidden" />
-      de entretenimiento 
-      <br class="block sm:hidden" /> con más de 90 canales
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      Contrata tu servicio de cable por Q100 al mes
-    </Fragment>
-  </CallToAction>
-  
+  </Brands>  
 
   <!-- Features Widget *************** -->
 
@@ -142,6 +112,46 @@ const metadata = {
       },
     ]}
   />
+
+  <!-- Call to action Cable ********** -->
+
+  <Announcement />
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="servicios"
+    tagline="Nuestros Servicios"
+    title="Conexiones que trascienden"
+    subtitle="Nuestra misión es proporcionar una experiencia sin igual, donde cada servicio es una puesta a mundos de posibilidades."
+    items={[
+      {
+        title: 'Internet',
+        description:
+          'Internet de alta velocidad, confiable y asequible para satisfacer las demandas del mundo digital actual.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Televisión',
+        description:
+          'Con más de 90 canales disponibles, nuestra oferta de televisión por cable es como un telescopio que te acerca a galaxias de contenido diverso.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Paquetes combinados',
+        description:
+          'Nuestros paquetes de Internet + Cable se alinean con las necesidades...',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Transporte de datos',
+        description:
+          'Facilitamos la comunicación entre empresas con soluciones de transporte de datos de alta velocidad y confiabilidad.',
+        icon: 'tabler:rocket',
+      },
+    ]}
+  />
+  
 
   <!-- Content Widget **************** -->
 

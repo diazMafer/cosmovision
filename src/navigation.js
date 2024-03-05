@@ -26,7 +26,7 @@ export const headerData = {
     },
     {
       text: 'Contacto',
-      href: '#',
+      href: '/contact',
     }
   ],
   actions: [{ text: 'Contratar', href: 'https://github.com/onwidget/astrowind', target: '_blank' }],
