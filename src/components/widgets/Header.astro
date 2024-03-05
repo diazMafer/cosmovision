@@ -39,10 +39,10 @@ const {
   links = [],
   actions = [],
   isSticky = false,
-  isDark = false,
+  isDark = true,
   isFullWidth = false,
-  showToggleTheme = false,
-  showRssFeed = false,
+/*   showToggleTheme = false,
+  showRssFeed = false, */
   position = "center",
 } = Astro.props;
 
@@ -52,7 +52,7 @@ const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`
 <header
   class:list={[
     { sticky: isSticky, relative: !isSticky, dark: isDark },
-    "top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out",
+    "top-0 z-40 flex-none mx-auto w-full border-b border-gray-50/0 transition-[opacity] ease-in-out bg-hero",
   ]}
   {...isSticky ? { "data-aw-sticky-header":  true } : {}}
   {...id ? { id } : {}}

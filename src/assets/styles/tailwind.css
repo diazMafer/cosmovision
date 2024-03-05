@@ -33,6 +33,9 @@
   .conection-width {
     width: fit-content;
   }
+  .bg-hero{
+    background-color: #000D37;
+  }
   .conection-padding {
     padding: 2px 15px;
   }
