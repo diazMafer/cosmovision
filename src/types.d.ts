@@ -228,6 +228,7 @@ export interface Stats extends Headline, Widget {
 
 export interface Pricing extends Headline, Widget {
   prices?: Array<Price>;
+  cols?: string;
 }
 
 export interface Testimonials extends Headline, Widget {

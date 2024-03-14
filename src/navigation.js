@@ -14,8 +14,8 @@ export const headerData = {
           href: getPermalink('/pricing'),
         },
         {
-          text: 'Magdalena',
-          href: getPermalink('/pricing'),
+          text: 'Milpas Altas',
+          href: getPermalink('/pricing2'),
         },
         
       ],

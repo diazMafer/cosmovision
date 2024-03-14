@@ -11,6 +11,7 @@ interface Props extends Widget {
   subtitle?: string;
   tagline?: string;
   prices?: any;
+  cols?: string;
 
 }
 
@@ -19,6 +20,8 @@ const {
   subtitle = '',
   tagline = '',
   prices = [],
+  cols = '4',
+
 
   id,
   isDark = false,
@@ -30,7 +33,7 @@ const {
 <WidgetWrapper id={id} isDark={isDark} containerClass={`max-w-7xl mx-auto container-pricing ${classes?.container ?? ''}`} bg={bg}>
   <Headline title={title} subtitle={subtitle} tagline={tagline} />
   <div class="flex items-stretch justify-center">
-    <div class="grid grid-cols-4 gap-11 dark:text-white sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-4">
+    <div class={`grid grid-cols-${cols} gap-11 dark:text-white sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-${cols} xl:grid-cols-${cols}`}>
       {
         prices &&
           prices.map(({ title, subtitle, megas, capacity, period, items, price, callToAction, image, hasRibbon = false, ribbonTitle }) => (
