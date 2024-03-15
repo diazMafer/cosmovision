@@ -51,6 +51,9 @@
   .text-accent-blue {
     color: var(--aw-color-accent-blue);
   }
+  .text-accent-orange {
+    color: var(--aw-color-accent);
+  }
   .shadow {
     background-color: rgb(247, 247, 245);
     border: 2px solid rgb(240, 240, 233);

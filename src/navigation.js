@@ -1,10 +1,10 @@
-import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
+import { getPermalink } from './utils/permalinks';
 
 export const headerData = {
   links: [
     {
       text: 'Inicio',
-      href: '#',
+      href: '/',
     },
     {
       text: 'Planes',
@@ -22,7 +22,7 @@ export const headerData = {
     },
     {
       text: 'Coorporativo',
-      href: '#',
+      href: '/',
     },
     {
       text: 'Contacto',
@@ -38,15 +38,14 @@ export const footerData = {
       title: 'Servicios',
       links: [
         { text: 'Cable', href: '#' },
-        { text: 'Internet', href: '#' },
-        { text: 'Coorporativo', href: '#' },
+        { text: 'Internet', href: '/pricing' },
+        { text: 'Coorporativo', href: '/coorporativo' },
       ],
     },
     {
-      title: 'Compañia',
+      title: 'Compañía',
       links: [
-        { text: 'Quienes Somos', href: '#' },
-        { text: 'Blog', href: '#' },
+        { text: 'Quienes Somos', href: '/about' },
       ],
     },
     {
