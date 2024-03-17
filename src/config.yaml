@@ -1,6 +1,6 @@
 site:
   name: Cosmovision
-  site: 'https://astrowind.vercel.app'
+  site: 'https://cosmovisiongt.netlify.app'
   base: '/'
   trailingSlash: false
 
