@@ -21,8 +21,8 @@ export const headerData = {
       ],
     },
     {
-      text: 'Coorporativo',
-      href: '/',
+      text: 'Quienes Somos',
+      href: '/about',
     },
     {
       text: 'Contacto',
@@ -39,7 +39,7 @@ export const footerData = {
       links: [
         { text: 'Cable', href: '#' },
         { text: 'Internet', href: '/pricing' },
-        { text: 'Coorporativo', href: '/coorporativo' },
+        { text: 'Quienes Somos', href: '/about' },
       ],
     },
     {
