@@ -51,7 +51,7 @@ export const footerData = {
       title: 'Contacto',
       links: [
         { text: '2375-2111', href: '#' },
-        { text: '4958-5443', href: '#' },
+        { text: '4917-7756', href: '#' },
         { text: 'info@cosmovisiongt.com', href: '#' },
       ],
     },
