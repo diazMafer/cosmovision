@@ -12,15 +12,16 @@ const metadata = {
 <Layout metadata={metadata}>
   <!-- HeroText Widget ******************* -->
 
-  <HeroText tagline="Contactanos" title="Envianos un mensaje" />
+  <HeroText tagline="Nuestro Contacto" title="¡Conectemos!" />
 
   <ContactUs
-    title="Drop us a message today!"
-    subtitle="For quicker answers, explore our FAQs section. You may find the solution you're looking  for right there! If not, our support team is delighted to help you."
+    title="Deja tu mensaje hoy"
+    subtitle="Responderemos a tu solicitud lo más pronto posible."
+    button="Enviar"
     inputs={[
       {
         type: 'text',
-        name: 'Nombre',
+        name: 'nombre',
         label: 'Nombre',
       },
       {
@@ -34,31 +35,35 @@ const metadata = {
     }}
     disclaimer={{
       label:
-        'By submitting this contact form, you acknowledge and agree to the collection of your personal information.',
+        'Al enviar este formulario, usted reconoce la recopilación de su información personal.'
     }}
-    description="Our support team typically responds within 24 business hours."
   />
 
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="We are here to help!"
+    title="Otras formas de contactarnos"
     items={[
       {
-        title: 'Phone',
-        description: '+1 (234) 567-890',
-        icon: 'tabler:headset',
+        title: 'Villa Nueva',
+        description: 'Boulevard principal Terrezas, Peronia 502-Villa Nueva, Guatemala',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Email',
-        description: 'contact@support.com',
+        title: 'San Lucas',
+        description: 'Boulevard principal Terrezas, Peronia 502-Villa Nueva, Guatemala',
+        icon: 'tabler:map-pin',
+      },
+      {
+        title: 'Correo',
+        description: 'soporte@cosmovisiongt.com',
         icon: 'tabler:mail',
       },
       {
-        title: 'Location',
-        description: '1234 Lorem Ipsum St, 12345, Miami, EEUU',
-        icon: 'tabler:map-pin',
-      },
+        title: 'Teléfono',
+        description: '+502 3047-1509',
+        icon: 'tabler:phone',
+      }
     ]}
   />
 </Layout>
