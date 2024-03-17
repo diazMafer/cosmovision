@@ -1,4 +1,7 @@
-
-<span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
-  <img src='src/assets/images/logoN.png' alt='Cosmovision' class="max-h-20" />
-</span>
+---
+import Image from '~/components/common/Image.astro';
+---
+  <Image src="~/assets/images/logoN.png" alt="Cosmovision" 
+    sizes="(max-width: 767px) 200px, (max-width: 1023px) 768px, (max-width: 2039px) 400px"
+    loading="eager"
+  />
