@@ -1,19 +1,32 @@
 ---
+import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
+import type { Widget } from '~/types';
+
+interface Props extends Widget {
+  image?: string;
+}
+
+const {
+  image = '',
+  bg = await Astro.slots.render('bg'),
+} = Astro.props as Announcement;
 ---
 
-<div
-  class="text-muted text-s hidden md:block overflow-hidden px-3 py-2 relative text-ellipsis whitespace-nowrap"
->
-  <a
-    target="_blank"
-    rel="noopener"
-    class="float-right rtl:float-left"
-    title="If you like AstroWind, give us a star."
-    href="https://github.com/onwidget/astrowind"
+<WidgetWrapper>
+  <div
+    class="text-muted text-s hidden md:block overflow-hidden px-3 py-2 relative text-ellipsis whitespace-nowrap"
   >
-    <img
-      src="src/assets/images/ctaTV.png"
-      alt="Servicio de Cable Q100 al mes"
-    />
-  </a>
-</div>
+    <a
+      target="_blank"
+      rel="noopener"
+      class="float-right rtl:float-left"
+      title="If you like AstroWind, give us a star."
+      href="https://github.com/onwidget/astrowind"
+    >
+      <img
+        src={image}
+        alt="Servicio de Cable Q100 al mes"
+      />
+    </a>
+  </div>
+</WidgetWrapper>

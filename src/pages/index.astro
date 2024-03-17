@@ -114,7 +114,7 @@ const metadata = {
 
   <!-- Call to action Cable ********** -->
 
-  <Announcement />
+  <Announcement image="src/assets/images/ctaTV.png"/>
 
   <!-- Features Widget *************** -->
 
@@ -191,30 +191,34 @@ const metadata = {
 
   <!-- Steps2 Widget ****************** -->
 
-  <Steps2
-    title="Contactanos"
-    subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
-    callToAction={{
-      text: 'Escribenos',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Llamanos',
-        description: '2375-2311',
-        icon: 'tabler:headset',
-      },
-      {
-        title: 'Escribenos',
-        description: '4958-5443',
-        icon: 'tabler:brand-whatsapp',
-      },
-      {
-        title: 'Siguenos',
-        description: 'Cosmovision',
-        icon: 'tabler:brand-facebook',
-      },
-    ]}
-  />
+  <div class="flex">
+    <Steps2
+      title="Contactanos"
+      subtitle="Have questions? Feel free to contact us using the form below. We're here to help!"
+      callToAction={{
+        text: 'Escribenos',
+        href: '/',
+      }}
+      items={[
+        {
+          title: 'Llamanos',
+          description: '2375-2311',
+          icon: 'tabler:headset',
+        },
+        {
+          title: 'Escribenos',
+          description: '4958-5443',
+          icon: 'tabler:brand-whatsapp',
+        },
+        {
+          title: 'Siguenos',
+          description: 'Cosmovision',
+          icon: 'tabler:brand-facebook',
+        },
+      ]}
+    />
+
+    <Announcement image="src/assets/images/cosmoBanner.jpeg"/>
+  </div>
 
 </Layout>

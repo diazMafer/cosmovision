@@ -231,6 +231,10 @@ export interface Pricing extends Headline, Widget {
   cols?: string;
 }
 
+export interface Announcement extends Headline, Widget {
+  image?: string | unknown;
+}
+
 export interface Testimonials extends Headline, Widget {
   testimonials?: Array<Testimonial>;
   callToAction?: CallToAction;
