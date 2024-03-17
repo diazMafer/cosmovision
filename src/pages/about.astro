@@ -1,8 +1,7 @@
 ---
 import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
+import Hero2 from '~/components/widgets/Hero2.astro';
 import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
@@ -16,10 +15,6 @@ const metadata = {
 
   <Hero
     tagline="Quienes Somos"
-    image={{
-      src: 'src/assets/images/cosmoBanner.jpeg',
-      alt: 'Caos Image',
-    }}
   >
     <Fragment slot="title">
       Somos una empresa líder <br />
@@ -33,105 +28,37 @@ servicio al cliente excepcional.
     </Fragment>
   </Hero>
 
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Educational',
-        description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Interior Design',
-        description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Photography',
-        description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'E-commerce',
-        description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Blog',
-        description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Business',
-        description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Branding',
-        description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Medical',
-        description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
-      },
-      {
-        title: 'Fashion Design',
-        description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
-    }}
-  />
+  <Hero2
+    image={{ src: '~/assets/images/heroR.png', alt: 'Cosmovision Hero Image'}}
+  >
+    <Fragment slot='title'>
+      12 AÑOS DE <span class="text-accent">EXCELENCIA</span> EN SERVICIOS DE TELECOMUNICACIONES
+    </Fragment>
+  </Hero2>
 
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Nuestros Servicios"
+    subtitle="Ofrecemos una amplia gama de servicios de telecomunicaciones diseñados para transformar la manera en la que te conectas en el mundo digital. Desde una conectividad de alta velocidad hasta soluciones empresariales, estamos aquí para llevar tu experiencia de comunicación al siguiente nivel."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'Servicio de Internet',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'Internet de alta velocidad confiable y asequible para satisfacer las necesidades de hogares y empresas.',
+        icon: 'tabler:router',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Televisión',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'Con una oferta diversa de más de 90 canales y una personalización y flexibilidad a través de IPTV.',
+        icon: 'tabler:device-tv',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Transporte de Datos',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'Facilitamos la comunicación entre empresas con soluciones de transporte de datos de alta velocidad y confiabilidad.',
+        icon: 'tabler:layers-linked',
       },
     ]}
   />
@@ -139,30 +66,26 @@ servicio al cliente excepcional.
   <!-- Steps2 Widget ****************** -->
 
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="Acuerdo de Nivel de Servicio"
+    subtitle="Nuestro Acuerdo de Nivel de Servicio (SLA) es una garantía de nuestro compromiso con la excelencia en el servicio. Establecemos estándares rigurosos para asegurar que nuestros clientes experimenten la más alta calidad en conectividad, respaldada por un soporte técnico excepcional"
     isReversed={true}
-    callToAction={{
-      text: 'See more',
-      href: '/',
-    }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'SLA Área Metropolitana',
+        description: 'Nuestro Acuerdo de Nivel de Servicio (SLA) garantiza un tiempo de actividad del 99%, asegurando que la conectividad para nuestros clientes en el área metropolitana sea excepcionalmente confiable',
+        icon: 'tabler:percentage',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Latencia',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Nos enorgullece ofrecer una experiencia de internet excepcional con una latencia que no supera las 50 milésimas de segundo',
+        icon: 'tabler:home-bolt',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'QoS',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'Mantenemos un promedio de satisfacción del 95% entre nuestros usuarios, respaldando nuestra búsqueda constante de excelencia en la calidad de servicio.',
+        icon: 'tabler:comet',
       },
     ]}
   />
@@ -170,48 +93,28 @@ servicio al cliente excepcional.
   <!-- Features2 Widget ************** -->
 
   <Features2
-    title="Our locations"
-    tagline="Find us"
-    columns={4}
+    title="Contáctanos"
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'Villa Nueva',
+        description: 'Boulevard principal Terrezas, Peronia 502-Villa Nueva, Guatemala',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'San Lucas',
+        description: 'Local 107 Centro Comercial San Lucas',
+        icon: 'tabler:map-pin',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: 'Correo',
+        description: 'info@cosmovisiongt.com',
+        icon: 'tabler:mail',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Technical Support"
-    tagline="Contact us"
-    columns={2}
-    items={[
-      {
-        title: 'Chat with us',
-        description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
-      },
-      {
-        title: 'Call us',
-        description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
-      },
+        title: 'Teléfono',
+        description: '+502 2375 2311',
+        icon: 'tabler:phone',
+      }
     ]}
   />
 </Layout>
