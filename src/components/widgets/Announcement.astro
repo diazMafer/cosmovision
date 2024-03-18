@@ -1,15 +1,8 @@
 ---
+import Image from '~/components/common/Image.astro';
 import WidgetWrapper from '~/components/ui/WidgetWrapper.astro';
-import type { Widget } from '~/types';
 
-interface Props extends Widget {
-  image?: string;
-}
-
-const {
-  image = '',
-  bg = await Astro.slots.render('bg'),
-} = Astro.props as Announcement;
+const props = Astro.props;
 ---
 
 <WidgetWrapper>
@@ -23,8 +16,8 @@ const {
       title="If you like AstroWind, give us a star."
       href="https://wa.me/50249177756?text=Estoy%20interesado%20en%20el%20servicio%20de%20cable%20"
     >
-      <img
-        src={image}
+      <Image
+        src={props.image}
         alt="Servicio de Cable Q100 al mes"
       />
     </a>
