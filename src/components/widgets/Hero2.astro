@@ -2,6 +2,7 @@
 import Image from '~/components/common/Image.astro';
 import type { CallToAction } from '~/types';
 import Button from '~/components/ui/Button.astro';
+import clouds from '~/assets/images/clouds.png';
 
 export interface Props {
   title?: string;
@@ -88,7 +89,7 @@ const {
       </div>
     </div>
     <div class="">
-      <Image src='src/assets/images/clouds.png' alt='Clouds' class="" />
+      <Image src={clouds} alt='Clouds' class="" />
     </div>
     
   </div>
