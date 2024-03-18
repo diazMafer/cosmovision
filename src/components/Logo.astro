@@ -1,7 +1,8 @@
 ---
 import Image from '~/components/common/Image.astro';
+import logo from '~/assets/images/logoN.png';
 ---
-  <Image src="~/assets/images/logoN.png" alt="Cosmovision" 
-    sizes="(max-width: 767px) 200px, (max-width: 1023px) 768px, (max-width: 2039px) 400px"
+  <Image src={logo} alt="Cosmovision" 
+    sizes="(max-width: 767px) 200px, (max-width: 1023px) 300, (max-width: 2039px) 300px"
     loading="eager"
   />
