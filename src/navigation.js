@@ -55,6 +55,11 @@ export const footerData = {
         { text: 'info@cosmovisiongt.com', href: 'mailto:info@cosmovisiongt.com', target: "_blank" },
       ],
     },
+    {
+      title: 'Agencias',
+      links: [
+        { text: 'Ciudad Peronia: 5a Avenida 6-58 Boulevard Principal Las Terrazas' },      ],
+    },
   ],
   secondaryLinks: [
     { text: 'Terminos y Condiciones', href: getPermalink('/terms') },
