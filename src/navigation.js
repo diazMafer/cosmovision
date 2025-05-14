@@ -7,6 +7,10 @@ export const headerData = {
       href: '/',
     },
     {
+      text: 'Cable TV',
+      href: '/cable',
+    },
+    {
       text: 'Planes',
       links: [
         {
