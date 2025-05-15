@@ -1,7 +1,8 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
-import Features3 from '~/components/widgets/Features3.astro';
+import ChannelGrid from '~/components/ui/ChannelGrid.astro';
+
 
 const metadata = {
   title: 'Grilla de Canales ',
@@ -12,45 +13,18 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText
-    tagline="Ciudad Peronia"
-    subtitle="Explora nuestros planes diseñados para adaptarse a cada necesidad y estilo de vida."
+    tagline="TV CABLE"
+    subtitle="Explora nuestros canales de entretenimiento en nuestro servicio."
   >
     <Fragment slot="title">
-      Selecciona el plan 
-      <span class="text-accent-orange dark:text-white highlight"> perfecto para ti </span>
+      GRILLA DE 
+      <span class="text-accent-orange dark:text-white highlight">CANALES </span>
     </Fragment>
   </HeroText>
 
-  <!-- Features3 Widget ************** -->
+  <!-- Channel Grid Widget ************** -->
 
-  <Features3
-    title="Conéctate al Universo"
-    subtitle="Descubre las ventajes al contratar nuestros planes "
-    columns={2}
-    items={[
-      {
-        title: 'Velocidad Luz',
-        description: 'Navega a velocidades que desafían las estrellas. Perfecto para streaming, juegos, y mucho más, sin interrupciones.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Confiabilidad Galáctica',
-        description: ' Con nuestra tecnología avanzada, aseguramos una conexión estable que está contigo en todo momento, como la constante luz de las estrellas.',
-        icon: 'tabler:stars-filled',
-      },
-      {
-        title: 'Soporte Tecnico',
-        description: 'Nuestros expertos están siempre listos para ayudarte, en cualquier momento y lugar, garantizando que tu experiencia sea siempre óptima.',
-        icon: 'tabler:tools',
-      },
-      {
-        title: 'Planes Flexibles',
-        description: `Adaptamos nuestras ofertas a tus necesidades. Con nosotros, tienes el poder de elegir y personalizar tu experiencia en línea.`,
-        icon: 'tabler:router',
-      },
-    ]}
-    classes={{ container: 'max-w-5xl' }}
-  />
+  <ChannelGrid />
 
 
 </Layout>

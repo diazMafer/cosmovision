@@ -2,14 +2,14 @@ import type { ImageMetadata } from 'astro:assets';
 
 import logo2Tooncast            from '~/assets/images/canales/2-tooncast.png';
 import logo3Canal3              from '~/assets/images/canales/3-canal3.png';
-import logo4CartoonNetwork      from '~/assets/images/canales/4-cartoonnetwork.png';
+import logo4CartoonNetwork      from '~/assets/images/canales/4-cartoon.png';
 import logo5Boomerang           from '~/assets/images/canales/5-boomerang.png';
 import logo6Nickelodeon         from '~/assets/images/canales/6-nickelodeon.png';
 import logo7Canal7              from '~/assets/images/canales/7-televisiete.png';
 import logo8NickJr              from '~/assets/images/canales/8-nickjr.png';
 import logo9DisneyChannel       from '~/assets/images/canales/9-disneychannel.png';
 import logo10DiscoveryKids      from '~/assets/images/canales/10-dkids.png';
-import logo11Canal11            from '~/assets/images/canales/11-canal11.png';
+import logo11Canal11            from '~/assets/images/canales/11-canal11.webp';
 import logo12BabyTV             from '~/assets/images/canales/12-babytv.png';
 import logo13Canal13            from '~/assets/images/canales/13-canal13.png';
 import logo14DisneyJr           from '~/assets/images/canales/14-disneyjr.png';
@@ -21,14 +21,14 @@ import logo19Guatevision        from '~/assets/images/canales/19-guatevision.web
 import logo20AXN                from '~/assets/images/canales/20-axn.png';
 import logo21AztecaGuate        from '~/assets/images/canales/21-tvaztecaguate.webp';
 import logo22StudioUniversal    from '~/assets/images/canales/22-studiouniversal.png';
-import logo23FX                 from '~/assets/images/canales/23-fx.png';
+import logo23FX                 from '~/assets/images/canales/23-FX.png';
 import logo24BitMe              from '~/assets/images/canales/24-bitme.png';
 import logo25ESPN5              from '~/assets/images/canales/25-espn5.png';
 import logo26ESPN4              from '~/assets/images/canales/26-espn4.png';
 import logo27ESPN6              from '~/assets/images/canales/27-espn6.png';
 import logo28ESPN               from '~/assets/images/canales/28-espn.png';
 import logo29ESPN2              from '~/assets/images/canales/29-espn2.png';
-import logo30DiscoveryTurbo     from '~/assets/images/canales/30-turbodisvoery.png';
+import logo30DiscoveryTurbo     from '~/assets/images/canales/30-turbodiscovery.png';
 import logo31TUDN               from '~/assets/images/canales/31-tudn.png';
 import logo32Corazon            from '~/assets/images/canales/32-corazon.png';
 import logo33LasEstrellas       from '~/assets/images/canales/33-lasestrellas.png';
@@ -40,14 +40,13 @@ import logo38DePelicula         from '~/assets/images/canales/38-depelicula.png'
 import logo39TCM                from '~/assets/images/canales/39-tcm.png';
 import logo40Univision          from '~/assets/images/canales/40-univision.png';
 import logo41TNT                from '~/assets/images/canales/41-tnt.png';
-import logo42Local              from '~/assets/images/canales/42-local.png';
 import logo43GoldenEdge         from '~/assets/images/canales/43-goldenedge.png';
 import logo44Cinecanal          from '~/assets/images/canales/44-cinecanal.png';
 import logo45UniversalTV        from '~/assets/images/canales/45-universal.png';
 import logo46Golden             from '~/assets/images/canales/46-golden.png';
 import logo47CinemaPlatino      from '~/assets/images/canales/47-cinemaplatino.webp';
 import logo48Multipremier       from '~/assets/images/canales/48-multipremier.png';
-import logo49DistritoComedia    from '~/assets/images/canales/49-distrito-comedia.png';
+import logo49DistritoComedia    from '~/assets/images/canales/49-distritocomedia.png';
 import logo50InvestigationDiscovery from '~/assets/images/canales/50-investigationdiscovery.png';
 import logo51AnimalPlanet       from '~/assets/images/canales/51-animalplanet.png';
 import logo52History2           from '~/assets/images/canales/52-history2.png';
@@ -66,7 +65,7 @@ import logo64XTime              from '~/assets/images/canales/64-xtchannel.webp'
 import logo65AMC                from '~/assets/images/canales/65-amc.png';
 import logo66FilmArts           from '~/assets/images/canales/66-filmarts.png';
 import logo67CNN                from '~/assets/images/canales/67-cnnespanol.png';
-import logo68Cineclick          from '~/assets/images/canales/68-cineclick.png';
+import logo68Cineclick          from '~/assets/images/canales/68-cineclick.webp';
 import logo69Agro21             from '~/assets/images/canales/69-agrotendencia.png';
 import logo70ESPN3              from '~/assets/images/canales/70-espn3.png';
 import logo71MTV                from '~/assets/images/canales/71-mtv.png';
@@ -80,11 +79,11 @@ import logo78HTV                from '~/assets/images/canales/78-htv.png';
 import logo79Space              from '~/assets/images/canales/79-space.png';
 import logo80France24           from '~/assets/images/canales/80-france24.png';
 import logo81PanicoHD           from '~/assets/images/canales/81-panico.webp';
-import logo82HispanTV           from '~/assets/images/canales/82-hispantv.png';
+import logo82HispanTV           from '~/assets/images/canales/82-hispantv.jpg';
 import logo83Antena3            from '~/assets/images/canales/83-antena3.png';
 import logo84MTV00s             from '~/assets/images/canales/84-mtv00s.png';
 import logo85VEACanal           from '~/assets/images/canales/85-veacanal.webp';
-import logo86Enlace             from '~/assets/images/canales/86-enlace.png';
+import logo86Enlace             from '~/assets/images/canales/86-enlace.webp';
 import logo87Canal27            from '~/assets/images/canales/87-canal27.png';
 import logo88MariaVision        from '~/assets/images/canales/88-mariavision.png';
 import logo89EWTN               from '~/assets/images/canales/89-ewtn.png';
@@ -93,8 +92,8 @@ import logo91ThreeABN           from '~/assets/images/canales/91-3abn.png';
 import logo92VEPlus             from '~/assets/images/canales/92-veplus.png';
 import logo93Lifetime           from '~/assets/images/canales/93-lifetime.png';
 import logo94AMas               from '~/assets/images/canales/94-amasguate.webp';
-import logo98Canal3Repeat       from '~/assets/images/canales/98-canal3.png';
-import logo99Canal7Repeat       from '~/assets/images/canales/99-televisiete.png';
+import logo98Canal3Repeat       from '~/assets/images/canales/3-canal3.png';
+import logo99Canal7Repeat       from '~/assets/images/canales/7-televisiete.png';
 
 export interface Canal {
     numero: number;
@@ -144,7 +143,6 @@ export interface Canal {
     { numero: 39, nombre: 'TCM',                    logo: logo39TCM,                 categoria: 'Series y Películas' },
     { numero: 40, nombre: 'Univisión',              logo: logo40Univision,           categoria: 'Internacional' },
     { numero: 41, nombre: 'TNT',                    logo: logo41TNT,                 categoria: 'Series y Películas' },
-    { numero: 42, nombre: 'Local',                  logo: logo42Local,               categoria: 'Nacionales' },
     { numero: 43, nombre: 'Golden Edge',           logo: logo43GoldenEdge,          categoria: 'Series y Películas' },
     { numero: 44, nombre: 'Cinecanal',              logo: logo44Cinecanal,           categoria: 'Series y Películas' },
     { numero: 45, nombre: 'Universal TV',          logo: logo45UniversalTV,           categoria: 'Series y Películas' },
@@ -197,9 +195,6 @@ export interface Canal {
     { numero: 92, nombre: 'VE Plus',               logo: logo92VEPlus,              categoria: 'Variedad' },
     { numero: 93, nombre: 'Lifetime',               logo: logo93Lifetime,            categoria: 'Series y Películas' },
     { numero: 94, nombre: 'A Más',                 logo: logo94AMas,                categoria: 'Noticias / Variedad' },
-    { numero: 95, nombre: 'Disponible',             logo: logo95Disponible,          categoria: 'Reserva' },
-    { numero: 96, nombre: 'Disponible',             logo: logo96Disponible,          categoria: 'Reserva' },
-    { numero: 97, nombre: 'Disponible',             logo: logo97Disponible,          categoria: 'Reserva' },
     { numero: 98, nombre: 'Repetidora Canal 3',     logo: logo98Canal3Repeat,        categoria: 'Nacionales' },
     { numero: 99, nombre: 'Repetidora Canal 7',     logo: logo99Canal7Repeat,        categoria: 'Nacionales' },
   ];
