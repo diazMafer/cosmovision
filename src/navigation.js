@@ -12,17 +12,7 @@ export const headerData = {
     },
     {
       text: 'Planes',
-      links: [
-        {
-          text: 'Ciudad Peronia',
-          href: getPermalink('/pricing'),
-        },
-        {
-          text: 'Milpas Altas',
-          href: getPermalink('/pricing2'),
-        },
-        
-      ],
+      href: '/pricing',
     },
     {
       text: 'Quienes Somos',
