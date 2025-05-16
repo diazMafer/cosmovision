@@ -6,20 +6,18 @@ import type { Canal } from '~/data/canales';
 const { numero, nombre, logo } = Astro.props as Canal;
 ---
 
-<figure class="border-2 border-orange-500 rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
-  <!-- Fondo gris suave para que los logos blancos destaquen -->
-  <div class="p-2 flex items-center justify-center h-40 bg-white">
-    <!-- Añadimos drop-shadow para resaltar contornos claros -->
+<figure class=" flex flex-col justify-between h-full border-2 border-orange-500 rounded-md overflow-hidden bg-white shadow-sm hover:shadow-md transition-shadow">
+  <div class="p-4 flex items-center justify-center h-40 bg-white flex-grow">
     <Image
       src={logo}
       alt={`Logo de ${nombre}`}
       width={120}
       height={120}
       loading="lazy"
-      class="filter drop-shadow-lg"
+      class="max-w-full max-h-full object-contain filter drop-shadow-lg"
     />
   </div>
-  <figcaption class="bg-orange-500 text-white text-md font-bold text-center py-1">
+  <figcaption class="w-full bg-orange-500 text-white text-md font-bold text-center py-2">
     {numero}. {nombre}
   </figcaption>
 </figure>
