@@ -6,7 +6,7 @@ import Features3 from '~/components/widgets/Features3.astro';
 import Tabs from '~/components/widgets/Tabs.astro';
 
 const metadata = {
-  title: 'Precios Ciudad Peronia',
+  title: 'Precios Internet',
 };
 ---
 
@@ -14,7 +14,7 @@ const metadata = {
   <!-- HeroText Widget ******************* -->
 
   <HeroText
-    tagline="Ciudad Peronia"
+    tagline="Servicio Internet"
     subtitle="Explora nuestros planes diseñados para adaptarse a cada necesidad y estilo de vida."
   >
     <Fragment slot="title">
@@ -30,55 +30,51 @@ const metadata = {
 
     <Prices
       slot='panel-1'
-      cols="4"
+      cols="3"
       prices={[
         {
-          title: 'Fibra Optica',
-          subtitle: 'PLAN MARTE',
-          megas: 25,
+          title: 'Conexión por Fibra Óptica',
+          subtitle: 'PLAN FAMILIAR',
+          megas: 60,
           price: 199,
-          capacity: 'MEGAS',
-          period: ' /al mes',
-          items: [
-            { description: 'Ideal para navegación basica', },
-            { description: 'Sin costo de instalación', },
-          ],
-        },
-        {
-          title: 'Fibra Optica',
-          subtitle: 'PLAN MERCURIO',
-          megas: 30,
-          price: 219,
-          capacity: 'MEGAS',
-          period: ' /al mes',
-          items: [
-            { description: 'Ideal para navegación basica', },
-            { description: 'Sin costo de instalación', },
-          ],
-        },
-        {
-          title: 'Fibra Optica',
-          subtitle: 'PLAN SATURNO',
-          megas: 50,
-          price: 249,
           capacity: 'MEGAS',
           period: ' /al mes',
           items: [
             { description: 'Ideal para familias y teletrabajadores', },
             { description: 'Sin costo de instalación', },
+            { description: 'Sin contrato', },
+            { description: 'Incluye 4 televisores*', },
           ],
+          hasRibbon: true,
           ribbonTitle: 'Popular',
         },
         {
-          title: 'Fibra Optica',
-          subtitle: 'PLAN VENUS',
+          title: 'Conexión por Fibra Óptica',
+          subtitle: 'PLAN AVANZADO',
           megas: 100,
+          price: 249,
+          capacity: 'MEGAS',
+          period: ' /al mes',
+          items: [
+            { description: 'Ideal para hogares con múltiples dispositivos conectados', },
+            { description: 'Sin costo de instalación', },
+            { description: 'Sin contrato', },
+            { description: 'Incluye 4 televisores*', },
+          ],
+          
+        },
+        {
+          title: 'Conexción por Fibra Óptica',
+          subtitle: 'PLAN GAMER',
+          megas: 200,
           price: 299,
           capacity: 'MEGAS',
           period: ' /al mes',
           items: [
             { description: 'Ideal para gamers u hogares con múltiples dispositivos', },
             { description: 'Sin costo de instalación', },
+            { description: 'Sin contrato', },
+            { description: 'Incluye 4 televisores*', },
           ],
         },
       ]}
@@ -89,47 +85,57 @@ const metadata = {
       cols="3"
       prices={[
         {
-          title: 'Fibra Optica',
-          subtitle: 'PLAN MERCURIO',
-          megas: 35,
+          title: 'Conexión por fibra óptica',
+          subtitle: 'PLAN BÁSICO',
+          megas: 60,
           capacity: 'MEGAS',
-          price: 225,
+          price: 180,
           period: ' /al mes',
           items: [
             { description: 'Ideal para navegación basica', },
             { description: 'Sin costo de instalación', },
-          ],
-        },
-        {
-          title: 'Fibra Optica',
-          subtitle: 'PLAN SATURNO',
-          megas: 50,
-          price: 275,
-          capacity: 'MEGAS',
-          period: ' /al mes',
-          items: [
-            { description: 'Ideal para familias y teletrabajadores', },
-            { description: 'Sin costo de instalación', },
+            { description: 'Sin contrato', },
           ],
           hasRibbon: true,
           ribbonTitle: 'popular',
         },
         {
-          title: 'Fibra Optica',
-          subtitle: 'PLAN VENUS',
-          megas: 75,
+          title: 'Conexión por fibra óptica',
+          subtitle: 'PLAN FAMILIAR',
+          megas: 100,
+          price: 230,
           capacity: 'MEGAS',
-          price: 375,
+          period: ' /al mes',
+          items: [
+            { description: 'Ideal para familias y teletrabajadores', },
+            { description: 'Sin costo de instalación', },
+            { description: 'Sin contrato', },
+          ],
+        },
+        {
+          title: 'Conexión por fibra óptica',
+          subtitle: 'PLAN AVANZADO',
+          megas: 200,
+          capacity: 'MEGAS',
+          price: 280,
           period: ' /al mes',
           items: [
             { description: 'Ideal para hogares con múltiples dispositivos conectados', },
             { description: 'Sin costo de instalación', },
+            { description: 'Sin contrato', },
           ],
         },
       ]}
     />
 
   </Tabs>
+
+  <section class="bg-blue-50 dark:bg-slate-800 not-prose">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
+      Precios pueden variar por zona. Cobertura sujeta a disponibilida técnica. <b> Sin contrato obligatorio. </b>
+     Aplican términos y condiciones. Velocidad puede variar según condiciones técnicas.
+    </div>
+  </section>
 
   <!-- Features3 Widget ************** -->
 
@@ -139,18 +145,18 @@ const metadata = {
     columns={2}
     items={[
       {
-        title: 'Velocidad Luz',
+        title: 'Velocidad ',
         description: 'Navega a velocidades que desafían las estrellas. Perfecto para streaming, juegos, y mucho más, sin interrupciones.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Confiabilidad Galáctica',
+        title: 'Confiabilidad ',
         description: ' Con nuestra tecnología avanzada, aseguramos una conexión estable que está contigo en todo momento, como la constante luz de las estrellas.',
         icon: 'tabler:stars-filled',
       },
       {
-        title: 'Soporte Tecnico',
-        description: 'Nuestros expertos están siempre listos para ayudarte, en cualquier momento y lugar, garantizando que tu experiencia sea siempre óptima.',
+        title: 'Soporte Técnico',
+        description: 'Nuestros expertos están siempre listos para ayudarte, garantizando que tu experiencia sea siempre óptima.',
         icon: 'tabler:tools',
       },
       {
