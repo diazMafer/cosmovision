@@ -44,8 +44,9 @@ export const footerData = {
     {
       title: 'Contacto',
       links: [
-        { text: '2375-2111' },
-        { text: '4917-7756' },
+        { text: 'PBX: 2375-2111' },
+        { text: 'Ciudad Peronia: 4917-7756' },
+        { text: 'Sacatepéquez: 3069-2865' },
         { text: 'info@cosmovisiongt.com', href: 'mailto:info@cosmovisiongt.com', target: "_blank" },
       ],
     },
