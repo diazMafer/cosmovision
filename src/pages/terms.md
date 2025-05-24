@@ -1,120 +1,111 @@
 ---
-title: 'Terms and Conditions'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
 
-_Last updated_: January 06, 2023
+_Ultima Actualización_: Mayo 24, 2025
 
-Please read these terms and conditions carefully before using Our Service.
+# TÉRMINOS Y CONDICIONES DE PRESTACIÓN DE SERVICIOS DE INTERNET Y TELEVISIÓN POR CABLE
+**Global Telecomunicaciones, S.A.**  
+Versión 0.1 — Vigente   
 
-## Interpretation and Definitions
+<!-- > *Este documento se publica para conocimiento del consumidor y se encuentra en proceso de inscripción como contrato de adhesión ante DIACO. En caso de discrepancia, prevalecerá la interpretación más favorable al usuario.*
+ -->
+---
 
-### Interpretation
+## 1. Definiciones
+**“Proveedor”**: Global Telecomunicaciones, S.A., sociedad mercantil organizada conforme a las leyes de la República de Guatemala y autorizada por la Superintendencia de Telecomunicaciones (SIT) para prestar servicios de telecomunicaciones.  
+**“Cliente”**: Persona individual o jurídica que contrata uno o más servicios ofrecidos por el Proveedor.  
+**“Servicios”**: Conectividad a Internet, televisión por cable y/o cualesquiera otros servicios de telecomunicaciones que ofrezca el Proveedor.  
 
-The words of which the initial letter is capitalized have meanings defined under the following conditions. The following definitions shall have the same meaning regardless of whether they appear in singular or in plural.
+## 2. Partes y aceptación
+Al solicitar el alta, firmar la orden de servicio física o digital, o confirmar la compra a través de los canales establecidos (sucursal, WhatsApp, sitio web, chatbot o llamada telefónica), el Cliente declara haber leído, comprendido y aceptado íntegramente los presentes Términos y Condiciones (en adelante, “TyC”).
 
-### Definitions
+## 3. Objeto del contrato
+Regular la relación jurídica entre el Proveedor y el Cliente relativa a la instalación, provisión, uso, facturación y soporte de los Servicios dentro del territorio guatemalteco.
 
-For the purposes of these Terms and Conditions:
+## 4. Cobertura y disponibilidad
+1. El Servicio solo se ofrece en las zonas de cobertura indicadas por el Proveedor.  
+2. La velocidad y calidad pueden variar por condiciones técnicas y de infraestructura (congestión de red, distancia a nodos, interferencias, etc.).  
+3. El Proveedor no garantiza continuidad ininterrumpida; se reserva el derecho de programar mantenimientos en horarios de bajo tráfico, notificándolo con al menos 24 h de antelación por medios masivos (WhatsApp, redes sociales o página web).
 
-- **Affiliate** means an entity that controls, is controlled by or is under common control with a party, where "control" means ownership of 50% or more of the shares, equity interest or other securities entitled to vote for election of directors or other managing authority.
+## 5. Proceso de contratación e instalación
+5.1 El Cliente proporcionará datos veraces y completos (nombre, DPI/NIT, dirección exacta, teléfonos y correo electrónico).  
+5.2 El plazo estándar de instalación es de tres (3) a cinco (5) días hábiles, salvo fuerza mayor.  
+5.3 El Cliente autoriza el acceso de personal técnico debidamente identificado al inmueble para instalar, retirar o dar mantenimiento al Equipo.  
+5.4 **Pago inicial obligatorio**: Como condición para activar el Servicio, el Cliente deberá cancelar por adelantado el primer mes de servicio. Este pago podrá efectuarse:  
+   a) en cualquiera de las agencias o por medios electrónicos al momento de generar la orden de servicio; o  
+   b) directamente a los técnicos inmediatamente después de finalizar la instalación.  
+   El Servicio no se habilitará hasta que el Proveedor confirme la recepción y conciliación del pago.  
+5.5 Una vez confirmado el pago inicial, el Proveedor emitirá la factura correspondiente y la enviará al Cliente en formato impreso (si la transacción se realiza en agencia) o por correo electrónico/WhatsApp, según la preferencia indicada por el Cliente.
 
-- **Country** refers to: California, United States
+## 6. Características del Servicio
+6.1 Planes de Internet: velocidad fija simétrica/asimétrica, consumo ilimitado de datos.  
+6.2 Televisión por cable: número de canales y resolución según plan vigente.  
+6.3 El Proveedor podrá introducir políticas razonables de gestión de tráfico conforme a la **Ley General de Telecomunicaciones** (Decreto 94‑96) y normativa de la SIT.
 
-- **Company** (referred to as either "the Company", "We", "Us" or "Our" in this Agreement) refers to AstroWind LLC, 1 Cupertino, CA 95014.
+## 7. Obligaciones del Cliente
+* Mantener los pagos al día dentro de los primeros cinco (5) días calendario de cada mes.  
+* No manipular, abrir ni alterar el Equipo provisto sin autorización escrita.  
+* No realizar prácticas que degraden la red o sean contrarias a ley (envío masivo de spam, distribución de contenido ilícito, etc.).  
+* Facilitar acceso para reparaciones programadas o emergencias.
 
-- **Device** means any device that can access the Service such as a computer, a cellphone or a digital tablet.
+## 8. Obligaciones del Proveedor
+* Prestar el Servicio con estándares técnicos vigentes y personal calificado.  
+* Entregar factura electrónica conforme a la **Ley de Facturación Electrónica en Línea**.  
+* Brindar soporte técnico a través de los canales oficiales.  
+* Atender y resolver reclamos en un plazo máximo de quince (15) días hábiles, de acuerdo con la **Ley de Protección al Consumidor y Usuario**.
 
-- **Service** refers to the Website.
+## 9. Tarifas, facturación y pago
+9.1 Las Tarifas vigentes se detallan en el **Anexo B** y pueden variar según zona (“sector”) y promoción.  
+9.2 Métodos de pago: efectivo en agencias, tarjeta en agencia, link de pago, transferencia bancaria (requiere envío de comprobante al WhatsApp).  
+9.3 **Suspensión por falta de pago (sin recargo por mora)**: El Servicio no genera cargos adicionales por mora. El Cliente debe realizar el pago correspondiente entre el 1 y el 5 de cada mes. Si a partir del día 6 el pago sigue pendiente, el Servicio podrá ser suspendido temporalmente el **día 10**. Si por razones operativas la suspensión no pudiera realizarse en esa fecha, se efectuará **a más tardar el día 20** del mismo mes.  
+9.4 **Entrega de factura**: El Proveedor emitirá y enviará la factura correspondiente en formato impreso o por medios electrónicos (correo electrónico o WhatsApp) según la preferencia del Cliente, inmediatamente después de confirmarse cada pago.
 
-- **Terms and Conditions** (also referred as "Terms") mean these Terms and Conditions that form the entire agreement between You and the Company regarding the use of the Service. This Terms and Conditions agreement is a Demo.
+## 10. Incumplimiento y suspensión
+10.1 El Proveedor podrá suspender o cancelar temporal o definitivamente el Servicio si el Cliente:  
+   a) incumple pago;  
+   b) utiliza la red para fines ilícitos;  
+   c) causa daños a la infraestructura;  
+   d) cede el Servicio sin autorización; o  
+   e) incurre en conducta hostil, irrespetuosa o agresiva hacia el personal del Proveedor durante la atención, instalación o mantenimiento.  
+   En caso de cancelación definitiva al amparo de este numeral, se aplicará lo dispuesto en el punto 10.4 sobre reembolso de saldos a favor.  
+10.2 **Direcciones con deuda pendiente**: Si un inmueble mantiene saldo vencido, no se procesará ningún cambio de titularidad, transferencia ni nueva instalación en esa dirección hasta que el Cliente cancele la totalidad de la deuda.  
+10.3 **Reinstalación tras suspensión o corte definitivo**: El Cliente podrá solicitar la reconexión del Servicio una vez pagada la deuda pendiente y la tarifa de reconexión vigente. El plazo de atención para reconexión es de tres (3) a cinco (5) días hábiles después de confirmarse el pago.  
+10.4 **Reembolso de pagos adelantados**: Si el Servicio se cancela definitivamente y el Cliente hubiese pagado por adelantado el mes en curso, el Proveedor reembolsará la parte proporcional del período no disfrutado dentro de un plazo máximo de treinta (30) días hábiles a partir de la fecha de cancelación. El reembolso se efectuará por el medio de pago utilizado o mediante nota de crédito, según elección del Cliente.
 
-- **Third-party Social Media Service** means any services or content (including data, information, products or services) provided by a third-party that may be displayed, included or made available by the Service.
+## 11. Equipo
+El Equipo (ONU/ONT, router, decodificador, cables) se entrega en comodato; sigue siendo propiedad del Proveedor. El Cliente deberá devolverlo en buen estado al cancelar el Servicio; de lo contrario se facturará el valor comercial.
 
-- **Website** refers to AstroWind, accessible from [https://astrowind.vercel.app](https://astrowind.vercel.app)
+## 12. Calidad de Servicio y compensaciones
+Cuando el Servicio sufra interrupciones continuas superiores a veinticuatro (24) horas **por causa imputable exclusivamente al Proveedor**, el Cliente tendrá derecho a una nota de crédito proporcional al tiempo sin servicio, la cual deberá solicitar dentro de los treinta (30) días naturales siguientes a la fecha de restitución.
 
-- **You** means the individual accessing or using the Service, or the company, or other legal entity on behalf of which such individual is accessing or using the Service, as applicable.
+**Exclusiones** (no procede compensación):  
+1. Fallas en el suministro eléctrico proveniente de la red pública o generadores externos.  
+2. Fenómenos naturales o climáticos severos.  
+3. Actos u omisiones de terceros ajenos al control del Proveedor (sabotaje, vandalismo, robo de cableado, cortes accidentales, etc.).  
+4. Disposiciones de autoridad competente o estados de excepción.  
+5. Cualquier otra causa fuera del control razonable del Proveedor.
 
-## Acknowledgment
+## 13. Atención al Cliente y reclamaciones
+El Cliente podrá presentar reclamos por escrito, vía WhatsApp o correo. De persistir la inconformidad, podrá acudir a la Defensoría del Consumidor y Usuario (DIACO) o a la SIT según corresponda.
 
-These are the Terms and Conditions governing the use of this Service and the agreement that operates between You and the Company. These Terms and Conditions set out the rights and obligations of all users regarding the use of the Service.
+## 14. Cambios de plan
+El Cliente podrá solicitar cambio de plan únicamente hacia planes cuyo precio mensual sea igual o superior al que mantiene vigente, siempre sujeto a viabilidad técnica y al cobro de la diferencia tarifaria o penalidades aplicables. No se permiten cambios a planes de menor precio.
 
-Your access to and use of the Service is conditioned on Your acceptance of and compliance with these Terms and Conditions. These Terms and Conditions apply to all visitors, users and others who access or use the Service.
+<!-- ## 15. Uso aceptable y restricciones
+Se adjunta **Anexo A** (Política de Uso Aceptable), que forma parte integral de estos TyC. -->
 
-By accessing or using the Service You agree to be bound by these Terms and Conditions. If You disagree with any part of these Terms and Conditions then You may not access the Service.
+## 15. Protección de datos y privacidad
+El Proveedor tratará los datos personales conforme a la legislación vigente. El Cliente autoriza el envío de comunicaciones comerciales y notificaciones por medios electrónicos; podrá revocar este consentimiento en cualquier momento.
 
-You represent that you are over the age of 18\. The Company does not permit those under 18 to use the Service.
+## 16. Responsabilidad y limitaciones
+El Proveedor no será responsable por pérdida de datos, lucro cesante o daños indirectos derivados del uso o imposibilidad de uso del Servicio, salvo dolo o culpa grave comprobada.
 
-Your access to and use of the Service is also conditioned on Your acceptance of and compliance with the Privacy Policy of the Company. Our Privacy Policy describes Our policies and procedures on the collection, use and disclosure of Your personal information when You use the Application or the Website and tells You about Your privacy rights and how the law protects You. Please read Our Privacy Policy carefully before using Our Service.
+## 17. Modificaciones de los TyC
+El Proveedor podrá modificar los TyC notificando al Cliente con al menos treinta (30) días de antelación. La continuación en el uso del Servicio tras dicho plazo implica aceptación de las modificaciones.
 
-## Links to Other Websites
+## 18. Vigencia y terminación
+Estos TyC permanecerán vigentes mientras el Cliente mantenga contratado algún Servicio. El Cliente podrá terminar el contrato en cualquier momento, con aviso mínimo de cinco (5) días hábiles.
 
-Our Service may contain links to third-party web sites or services that are not owned or controlled by the Company.
-
-The Company has no control over, and assumes no responsibility for, the content, privacy policies, or practices of any third party web sites or services. You further acknowledge and agree that the Company shall not be responsible or liable, directly or indirectly, for any damage or loss caused or alleged to be caused by or in connection with the use of or reliance on any such content, goods or services available on or through any such web sites or services.
-
-We strongly advise You to read the terms and conditions and privacy policies of any third-party web sites or services that You visit.
-
-## Termination
-
-We may terminate or suspend Your access immediately, without prior notice or liability, for any reason whatsoever, including without limitation if You breach these Terms and Conditions.
-
-Upon termination, Your right to use the Service will cease immediately.
-
-## Limitation of Liability
-
-Notwithstanding any damages that You might incur, the entire liability of the Company and any of its suppliers under any provision of this Terms and Your exclusive remedy for all of the foregoing shall be limited to the amount actually paid by You through the Service or 100 USD if You haven't purchased anything through the Service.
-
-To the maximum extent permitted by applicable law, in no event shall the Company or its suppliers be liable for any special, incidental, indirect, or consequential damages whatsoever (including, but not limited to, damages for loss of profits, loss of data or other information, for business interruption, for personal injury, loss of privacy arising out of or in any way related to the use of or inability to use the Service, third-party software and/or third-party hardware used with the Service, or otherwise in connection with any provision of this Terms), even if the Company or any supplier has been advised of the possibility of such damages and even if the remedy fails of its essential purpose.
-
-Some states do not allow the exclusion of implied warranties or limitation of liability for incidental or consequential damages, which means that some of the above limitations may not apply. In these states, each party's liability will be limited to the greatest extent permitted by law.
-
-## "AS IS" and "AS AVAILABLE" Disclaimer
-
-The Service is provided to You "AS IS" and "AS AVAILABLE" and with all faults and defects without warranty of any kind. To the maximum extent permitted under applicable law, the Company, on its own behalf and on behalf of its Affiliates and its and their respective licensors and service providers, expressly disclaims all warranties, whether express, implied, statutory or otherwise, with respect to the Service, including all implied warranties of merchantability, fitness for a particular purpose, title and non-infringement, and warranties that may arise out of course of dealing, course of performance, usage or trade practice. Without limitation to the foregoing, the Company provides no warranty or undertaking, and makes no representation of any kind that the Service will meet Your requirements, achieve any intended results, be compatible or work with any other software, applications, systems or services, operate without interruption, meet any performance or reliability standards or be error free or that any errors or defects can or will be corrected.
-
-Without limiting the foregoing, neither the Company nor any of the company's provider makes any representation or warranty of any kind, express or implied: (i) as to the operation or availability of the Service, or the information, content, and materials or products included thereon; (ii) that the Service will be uninterrupted or error-free; (iii) as to the accuracy, reliability, or currency of any information or content provided through the Service; or (iv) that the Service, its servers, the content, or e-mails sent from or on behalf of the Company are free of viruses, scripts, trojan horses, worms, malware, timebombs or other harmful components.
-
-Some jurisdictions do not allow the exclusion of certain types of warranties or limitations on applicable statutory rights of a consumer, so some or all of the above exclusions and limitations may not apply to You. But in such a case the exclusions and limitations set forth in this section shall be applied to the greatest extent enforceable under applicable law.
-
-## Governing Law
-
-The laws of the Country, excluding its conflicts of law rules, shall govern this Terms and Your use of the Service. Your use of the Application may also be subject to other local, state, national, or international laws.
-
-## Disputes Resolution
-
-If You have any concern or dispute about the Service, You agree to first try to resolve the dispute informally by contacting the Company.
-
-## For European Union (EU) Users
-
-If You are a European Union consumer, you will benefit from any mandatory provisions of the law of the country in which you are resident in.
-
-## United States Legal Compliance
-
-You represent and warrant that (i) You are not located in a country that is subject to the United States government embargo, or that has been designated by the United States government as a "terrorist supporting" country, and (ii) You are not listed on any United States government list of prohibited or restricted parties.
-
-## Severability and Waiver
-
-### Severability
-
-If any provision of these Terms is held to be unenforceable or invalid, such provision will be changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions will continue in full force and effect.
-
-### Waiver
-
-Except as provided herein, the failure to exercise a right or to require performance of an obligation under these Terms shall not effect a party's ability to exercise such right or require such performance at any time thereafter nor shall the waiver of a breach constitute a waiver of any subsequent breach.
-
-## Translation Interpretation
-
-These Terms and Conditions may have been translated if We have made them available to You on our Service. You agree that the original English text shall prevail in the case of a dispute.
-
-## Changes to These Terms and Conditions
-
-We reserve the right, at Our sole discretion, to modify or replace these Terms at any time. If a revision is material We will make reasonable efforts to provide at least 30 days' notice prior to any new terms taking effect. What constitutes a material change will be determined at Our sole discretion.
-
-By continuing to access or use Our Service after those revisions become effective, You agree to be bound by the revised terms. If You do not agree to the new terms, in whole or in part, please stop using the website and the Service.
-
-## Contact Us
-
-If you have any questions about these Terms and Conditions, You can contact us:
-
-- By email: somecoolemail@domain.com
+## 19. Legislación aplicable y jurisdicción
+Estos TyC se rigen por las leyes de la República de Guatemala, en especial por el Decreto 94‑96 **Ley General de Telecomunicaciones** y el Decreto 06‑2003 **Ley de Protección al Consumidor y Usuario**. Para cualquier controversia, las partes se someten a los tribunales competentes de la ciudad de Guatemala, renunciando a cualquier otro fuero.

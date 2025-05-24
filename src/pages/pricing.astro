@@ -3,6 +3,7 @@ import Layout from '~/layouts/PageLayout.astro';
 import HeroText from '~/components/widgets/HeroText.astro';
 import Prices from '~/components/widgets/Pricing.astro';
 import Features3 from '~/components/widgets/Features3.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
 import Tabs from '~/components/widgets/Tabs.astro';
 
 const metadata = {
@@ -151,7 +152,7 @@ const metadata = {
       },
       {
         title: 'Confiabilidad ',
-        description: ' Con nuestra tecnología avanzada, aseguramos una conexión estable que está contigo en todo momento, como la constante luz de las estrellas.',
+        description: ' Con nuestra tecnología avanzada, aseguramos una conexión estable que está contigo en todo momento.',
         icon: 'tabler:stars-filled',
       },
       {
@@ -167,6 +168,51 @@ const metadata = {
     ]}
     classes={{ container: 'max-w-5xl' }}
   />
+
+   <!-- FAQs Widget ******************* -->
+
+  <FAQs
+    title="Preguntas Frecuentes"
+    items={[
+      {
+        title: '¿Cuándo debo de pagar mi servicio?',
+        description:
+          'Entre el 1 y el 5 de cada mes',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Qué pasa si pago después del 5?',
+        description: 'Sí, tu servicio se suspendera el 10 (o, por motivos operativos, a más tardar el 20). No se aplican recargos por mora, pero permanecerás sin servicio hasta pagar tu saldo completo pendiente.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Cómo pido reconexión si me cortaron?',
+        description:
+          'Cancela el saldo vencido + tarifa de reconexión. El restablecimiento toma 3–5 días hábiles tras confirmar el pago.',
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Qué pasa con el equipo si cancelo el servicio?',
+        description: `Debes devolver la ONU/router y cables en buen estado. Si no lo haces, se factura el valor comercial.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Puedo cambiar de plan?',
+        description: `Puedes cambiar a planes de igual o mayor precio en cualquier momento, sujeto a viabilidad técnica.`,
+        icon: 'tabler:chevrons-right',
+      },
+      {
+        title: '¿Qué pasa si quiero cambiar de dirección?',
+        description: `Sí se puede. Debes trasladar tu propio router/ONU al nuevo domicilio y pagar una tarifa de Q 50 por el servicio de cambio de dirección. `,
+        icon: 'tabler:chevrons-right',
+      },
+    ]}
+  >
+    <Fragment slot="bg">
+      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
+    </Fragment>
+  </FAQs>
+
 
 
 </Layout>

@@ -30,29 +30,25 @@ export const footerData = {
     {
       title: 'Servicios',
       links: [
-        { text: 'Cable', href: '#' },
+        { text: 'Cable', href: '/cable' },
         { text: 'Internet', href: '/pricing' },
-        { text: 'Quienes Somos', href: '/about' },
       ],
     },
     {
       title: 'Compañía',
       links: [
         { text: 'Quienes Somos', href: '/about' },
+        { text: 'Terminos y Condiciones', href: '/terms'},
       ],
     },
     {
       title: 'Contacto',
       links: [
-        { text: '2375-2111' },
-        { text: '4917-7756' },
+        { text: 'PBX: 2375-2111' },
+        { text: 'Ciudad Peronia: 4917-7756' },
+        { text: 'Sacatepéquez: 3069-2865' },
         { text: 'info@cosmovisiongt.com', href: 'mailto:info@cosmovisiongt.com', target: "_blank" },
       ],
-    },
-    {
-      title: 'Agencias',
-      links: [
-        { text: 'Ciudad Peronia: 5a Avenida 6-58 Boulevard Principal Las Terrazas' },      ],
     },
   ],
   secondaryLinks: [
