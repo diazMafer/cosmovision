@@ -30,15 +30,15 @@ export const footerData = {
     {
       title: 'Servicios',
       links: [
-        { text: 'Cable', href: '#' },
+        { text: 'Cable', href: '/cable' },
         { text: 'Internet', href: '/pricing' },
-        { text: 'Quienes Somos', href: '/about' },
       ],
     },
     {
       title: 'Compañía',
       links: [
         { text: 'Quienes Somos', href: '/about' },
+        { text: 'Terminos y Condiciones', href: '/terms'},
       ],
     },
     {
@@ -49,11 +49,6 @@ export const footerData = {
         { text: 'Sacatepéquez: 3069-2865' },
         { text: 'info@cosmovisiongt.com', href: 'mailto:info@cosmovisiongt.com', target: "_blank" },
       ],
-    },
-    {
-      title: 'Agencias',
-      links: [
-        { text: 'Ciudad Peronia: 5a Avenida 6-58 Boulevard Principal Las Terrazas' },      ],
     },
   ],
   secondaryLinks: [
