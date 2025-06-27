@@ -39,6 +39,8 @@ export const footerData = {
       links: [
         { text: 'Quienes Somos', href: '/about' },
         { text: 'Terminos y Condiciones', href: '/terms'},
+        { text: 'Terminos y Condiciones Sorteo Bono 14', href: getPermalink('/sorteobono14') },
+
       ],
     },
     {
