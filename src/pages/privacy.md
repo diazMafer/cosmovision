@@ -1,11 +1,7 @@
 ---
-title: 'Privacy Policy'
+title: 'Política de Privacidad'
 layout: '~/layouts/MarkdownLayout.astro'
 ---
-
-_Last updated_: Octubre, 2026
-
-# Política de Privacidad
 
 **Cosmovision**
 Última actualización: 22 de octubre de 2026
@@ -26,7 +22,6 @@ compartimos y qué derechos tienen sobre ellos.
 | **Responsable** | Cosmovision |
 | **Sitio web** | https://cosmovisiongt.com |
 | **Correo de contacto** | info@cosmovisiongt.com |
-| **Teléfono** | 2376-4646 |
 
 ---
 
