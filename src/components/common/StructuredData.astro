@@ -1,0 +1,53 @@
+---
+import { BUSINESS } from '~/data/business';
+
+export interface Props {
+  extra?: Record<string, unknown>[];
+}
+
+const { extra = [] } = Astro.props;
+
+const organization = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  '@id': `${BUSINESS.url}/#organization`,
+  name: BUSINESS.name,
+  url: BUSINESS.url,
+  email: BUSINESS.email,
+  telephone: BUSINESS.phone,
+  ...(BUSINESS.facebook ? { sameAs: [BUSINESS.facebook] } : {}),
+  contactPoint: [
+    {
+      '@type': 'ContactPoint',
+      telephone: BUSINESS.phone,
+      contactType: 'customer service',
+      areaServed: 'GT',
+      availableLanguage: 'es',
+    },
+  ],
+};
+
+const locations = BUSINESS.locations.map((loc) => ({
+  '@context': 'https://schema.org',
+  '@type': 'LocalBusiness',
+  additionalType: 'https://schema.org/InternetServiceProvider',
+  name: loc.name,
+  parentOrganization: { '@id': `${BUSINESS.url}/#organization` },
+  url: BUSINESS.url,
+  telephone: loc.telephone,
+  email: BUSINESS.email,
+  priceRange: 'Q180 - Q299',
+  areaServed: BUSINESS.areaServed,
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: loc.streetAddress,
+    addressLocality: loc.addressLocality,
+    addressRegion: loc.addressRegion,
+    addressCountry: 'GT',
+  },
+}));
+
+const data = [organization, ...locations, ...extra];
+---
+
+{data.map((item) => <script type="application/ld+json" set:html={JSON.stringify(item)} />)}

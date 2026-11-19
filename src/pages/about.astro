@@ -6,7 +6,9 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'Quiénes somos',
+  description:
+    'Cosmovision es una empresa guatemalteca de telecomunicaciones con más de 12 años de experiencia en internet de alta velocidad, televisión por cable y transporte de datos.',
 };
 ---
 
@@ -29,7 +31,7 @@ servicio al cliente excepcional.
   </Hero>
 
   <Hero2
-    image={{ src: '~/assets/images/heroR.png', alt: 'Cosmovision Hero Image'}}
+    image={{ src: '~/assets/images/heroR.png', alt: 'Equipo y red de Cosmovision'}}
   >
     <Fragment slot='title'>
       12 AÑOS DE <span class="text-accent">EXCELENCIA</span> EN SERVICIOS DE TELECOMUNICACIONES
@@ -97,7 +99,7 @@ servicio al cliente excepcional.
     items={[
       {
         title: 'Villa Nueva',
-        description: 'Boulevard principal Terrezas, Peronia Villa Nueva, Guatemala',
+        description: 'Boulevard principal Terrazas, Peronia Villa Nueva, Guatemala',
         icon: 'tabler:map-pin',
       },
       {

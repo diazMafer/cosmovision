@@ -22,7 +22,10 @@ export default defineConfig({
   output: 'static',
   integrations: [tailwind({
     applyBaseStyles: false
-  }), sitemap(), mdx(), icon({
+  }), sitemap({
+    // Excluir páginas de demostración de la plantilla y redirecciones
+    filter: (page) => !/\/(homes|landing|services|pricing2|corporate|cable|blog|category|tag)(\/|$)/.test(new URL(page).pathname) && !/\/(astrowind-|get-started-|how-to-customize-|markdown-elements-|useful-resources-|landing$)/.test(new URL(page).pathname),
+  }), mdx(), icon({
     include: {
       tabler: ['*'],
       'flat-color-icons': ['template', 'gallery', 'approval', 'document', 'advertising', 'currency-exchange', 'voice-presentation', 'business-contact', 'database']

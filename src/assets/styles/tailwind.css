@@ -134,6 +134,10 @@
     @apply btn;
   }
 
+  .btn-whatsapp {
+    @apply btn font-semibold bg-[#25D366] text-white border-[#25D366] hover:bg-[#1da851] hover:border-[#1da851] hover:text-white dark:text-white;
+  }
+
   .btn-pricing {
     @apply text-white bg-pricing 
     border-none btn-radius pricing-width pricing-padding;

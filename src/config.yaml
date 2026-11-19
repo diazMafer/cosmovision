@@ -1,6 +1,6 @@
 site:
   name: Cosmovision
-  site: 'https://cosmovisiongt.netlify.app'
+  site: 'https://cosmovisiongt.com'
   base: '/'
   trailingSlash: false
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: Cosmovision
     template: '%s — Cosmovision'
-  description: "Cosmovision Guatemala - Internet y Cable a la velocidad de la luz"
+  description: "Internet por fibra óptica y cable TV en Villa Nueva, Ciudad Peronia y Sacatepéquez, Guatemala. Planes desde Q180 al mes, sin contrato y sin costo de instalación."
   robots:
     index: true
     follow: true
@@ -23,8 +23,6 @@ metadata:
         height: 628
     type: website
   twitter:
-    handle: '@onwidget'
-    site: '@onwidget'
     cardType: summary_large_image
 
 i18n:
@@ -33,7 +31,7 @@ i18n:
 
 apps:
   blog:
-    isEnabled: true
+    isEnabled: false
     postsPerPage: 6
 
     post:
@@ -100,7 +98,7 @@ ui:
         bgPage: rgb(3 6 32)
         primary: rgb(29 78 216)
         secondary: rgb(30 58 138)
-        accent: rgb(135 77 2267)
+        accent: rgb(135 77 227)
         info: rgb(58 191 248)
         success: rgb(54 211 153)
         warning: rgb(251 189 35)

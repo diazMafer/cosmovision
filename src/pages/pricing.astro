@@ -6,12 +6,59 @@ import Features3 from '~/components/widgets/Features3.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
 import Tabs from '~/components/widgets/Tabs.astro';
 
+import { whatsappLink } from '~/data/business';
+
 const metadata = {
-  title: 'Precios Internet',
+  title: 'Planes de Internet y TV por fibra óptica en Guatemala',
+  description:
+    'Planes de internet por fibra óptica desde Q180 al mes y paquetes Internet + TV desde Q199. Sin contrato y sin costo de instalación en Villa Nueva, Ciudad Peronia y Sacatepéquez.',
+};
+
+const contratar = (plan: string) => ({
+  text: 'Lo quiero',
+  href: whatsappLink(`Hola, me interesa contratar el ${plan}. ¿Hay cobertura en mi zona?`),
+  target: '_blank',
+});
+
+const faqs = [
+  { title: '¿Cuándo debo pagar mi servicio?', description: 'Entre el 1 y el 5 de cada mes.' },
+  {
+    title: '¿Qué pasa si pago después del 5?',
+    description:
+      'Tu servicio se suspenderá el día 10 (o, por motivos operativos, a más tardar el 20). No se aplican recargos por mora, pero permanecerás sin servicio hasta pagar tu saldo pendiente completo.',
+  },
+  {
+    title: '¿Cómo pido reconexión si me cortaron?',
+    description:
+      'Cancela el saldo vencido más la tarifa de reconexión. El restablecimiento toma de 3 a 5 días hábiles tras confirmar el pago.',
+  },
+  {
+    title: '¿Qué pasa con el equipo si cancelo el servicio?',
+    description: 'Debes devolver la ONU/router y los cables en buen estado. Si no lo haces, se factura su valor comercial.',
+  },
+  {
+    title: '¿Puedo cambiar de plan?',
+    description: 'Puedes cambiar a planes de igual o mayor precio en cualquier momento, sujeto a viabilidad técnica.',
+  },
+  {
+    title: '¿Qué pasa si quiero cambiar de dirección?',
+    description:
+      'Sí se puede. Debes trasladar tu router/ONU al nuevo domicilio y pagar una tarifa de Q50 por el servicio de cambio de dirección.',
+  },
+];
+
+const faqSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({
+    '@type': 'Question',
+    name: f.title,
+    acceptedAnswer: { '@type': 'Answer', text: f.description },
+  })),
 };
 ---
 
-<Layout metadata={metadata}>
+<Layout metadata={metadata} structuredData={[faqSchema]}>
   <!-- HeroText Widget ******************* -->
 
   <HeroText
@@ -40,6 +87,7 @@ const metadata = {
           price: 199,
           capacity: 'MEGAS',
           period: ' /al mes',
+          callToAction: contratar('Plan Básico 80 Mb + TV'),
           items: [
             { description: 'Ideal para familias y teletrabajadores', },
             { description: 'Sin costo de instalación', },
@@ -56,6 +104,7 @@ const metadata = {
           price: 249,
           capacity: 'MEGAS',
           period: ' /al mes',
+          callToAction: contratar('Plan Familiar 125 Mb + TV'),
           items: [
             { description: 'Ideal para hogares con múltiples dispositivos conectados', },
             { description: 'Sin costo de instalación', },
@@ -65,12 +114,13 @@ const metadata = {
           
         },
         {
-          title: 'Conexción por Fibra Óptica',
+          title: 'Conexión por Fibra Óptica',
           subtitle: 'PLAN GAMER',
           megas: 200,
           price: 299,
           capacity: 'MEGAS',
           period: ' /al mes',
+          callToAction: contratar('Plan Gamer 200 Mb + TV'),
           items: [
             { description: 'Ideal para gamers u hogares con múltiples dispositivos', },
             { description: 'Sin costo de instalación', },
@@ -92,6 +142,7 @@ const metadata = {
           capacity: 'MEGAS',
           price: 180,
           period: ' /al mes',
+          callToAction: contratar('Plan Básico 80 Mb'),
           items: [
             { description: 'Ideal para navegación basica', },
             { description: 'Sin costo de instalación', },
@@ -107,6 +158,7 @@ const metadata = {
           price: 230,
           capacity: 'MEGAS',
           period: ' /al mes',
+          callToAction: contratar('Plan Familiar 125 Mb'),
           items: [
             { description: 'Ideal para familias y teletrabajadores', },
             { description: 'Sin costo de instalación', },
@@ -120,6 +172,7 @@ const metadata = {
           capacity: 'MEGAS',
           price: 280,
           period: ' /al mes',
+          callToAction: contratar('Plan Avanzado 200 Mb'),
           items: [
             { description: 'Ideal para hogares con múltiples dispositivos conectados', },
             { description: 'Sin costo de instalación', },
@@ -133,7 +186,7 @@ const metadata = {
 
   <section class="bg-blue-50 dark:bg-slate-800 not-prose">
     <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
-      Precios pueden variar por zona. Cobertura sujeta a disponibilida técnica. <b> Sin contrato obligatorio. </b>
+      Precios pueden variar por zona. Cobertura sujeta a disponibilidad técnica. <b> Sin contrato obligatorio. </b>
      Aplican términos y condiciones. Velocidad puede variar según condiciones técnicas.
     </div>
   </section>
@@ -142,7 +195,7 @@ const metadata = {
 
   <Features3
     title="Conéctate al Universo"
-    subtitle="Descubre las ventajes al contratar nuestros planes "
+    subtitle="Descubre las ventajas de contratar nuestros planes"
     columns={2}
     items={[
       {
@@ -172,41 +225,9 @@ const metadata = {
    <!-- FAQs Widget ******************* -->
 
   <FAQs
+    id="preguntas-frecuentes"
     title="Preguntas Frecuentes"
-    items={[
-      {
-        title: '¿Cuándo debo de pagar mi servicio?',
-        description:
-          'Entre el 1 y el 5 de cada mes',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: '¿Qué pasa si pago después del 5?',
-        description: 'Sí, tu servicio se suspendera el 10 (o, por motivos operativos, a más tardar el 20). No se aplican recargos por mora, pero permanecerás sin servicio hasta pagar tu saldo completo pendiente.',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: '¿Cómo pido reconexión si me cortaron?',
-        description:
-          'Cancela el saldo vencido + tarifa de reconexión. El restablecimiento toma 3–5 días hábiles tras confirmar el pago.',
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: '¿Qué pasa con el equipo si cancelo el servicio?',
-        description: `Debes devolver la ONU/router y cables en buen estado. Si no lo haces, se factura el valor comercial.`,
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: '¿Puedo cambiar de plan?',
-        description: `Puedes cambiar a planes de igual o mayor precio en cualquier momento, sujeto a viabilidad técnica.`,
-        icon: 'tabler:chevrons-right',
-      },
-      {
-        title: '¿Qué pasa si quiero cambiar de dirección?',
-        description: `Sí se puede. Debes trasladar tu propio router/ONU al nuevo domicilio y pagar una tarifa de Q 50 por el servicio de cambio de dirección. `,
-        icon: 'tabler:chevrons-right',
-      },
-    ]}
+    items={faqs.map((f) => ({ ...f, icon: 'tabler:chevrons-right' }))}
   >
     <Fragment slot="bg">
       <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
