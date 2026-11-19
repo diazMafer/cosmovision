@@ -18,6 +18,44 @@
 # La grilla de canales está deshabilitada; enviar a los planes TV + Internet
 [[redirects]]
   from = "/cable"
-  to = "/pricing"
+  to = "/planes"
+  status = 301
+  force = true
+
+# URLs en español: redirigir las rutas anteriores en inglés (conserva links compartidos y posicionamiento)
+
+[[redirects]]
+  from = "/pricing"
+  to = "/planes"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact"
+  to = "/contacto"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about"
+  to = "/quienes-somos"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/terms"
+  to = "/terminos-y-condiciones"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy"
+  to = "/politica-de-privacidad"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/sorteobono14"
+  to = "/sorteo-bono-14"
   status = 301
   force = true

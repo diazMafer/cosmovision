@@ -9,15 +9,15 @@ export const headerData = {
     },
     {
       text: 'Planes',
-      href: '/pricing',
+      href: '/planes',
     },
     {
-      text: 'Quienes Somos',
-      href: '/about',
+      text: 'Quiénes Somos',
+      href: '/quienes-somos',
     },
     {
       text: 'Contacto',
-      href: '/contact',
+      href: '/contacto',
     }
   ],
 };
@@ -27,18 +27,18 @@ export const footerData = {
     {
       title: 'Servicios',
       links: [
-        { text: 'Internet + TV', href: '/pricing' },
-        { text: 'Internet', href: '/pricing' },
-        { text: 'Preguntas frecuentes', href: '/pricing#preguntas-frecuentes' },
+        { text: 'Internet + TV', href: '/planes' },
+        { text: 'Internet', href: '/planes' },
+        { text: 'Preguntas frecuentes', href: '/planes#preguntas-frecuentes' },
       ],
     },
     {
       title: 'Compañía',
       links: [
-        { text: 'Quienes Somos', href: '/about' },
-        { text: 'Términos y Condiciones', href: '/terms' },
-        { text: 'Política de Privacidad', href: '/privacy' },
-        { text: 'Términos y Condiciones Sorteo Bono 14', href: getPermalink('/sorteobono14') },
+        { text: 'Quiénes Somos', href: '/quienes-somos' },
+        { text: 'Términos y Condiciones', href: '/terminos-y-condiciones' },
+        { text: 'Política de Privacidad', href: '/politica-de-privacidad' },
+        { text: 'Términos y Condiciones Sorteo Bono 14', href: getPermalink('/sorteo-bono-14') },
 
       ],
     },
@@ -53,7 +53,7 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Términos y Condiciones', href: getPermalink('/terms') },
+    { text: 'Términos y Condiciones', href: getPermalink('/terminos-y-condiciones') },
   ],
   socialLinks: BUSINESS.facebook
     ? [{ ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: BUSINESS.facebook, target: '_blank' }]
