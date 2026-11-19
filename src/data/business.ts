@@ -8,8 +8,8 @@ export const BUSINESS = {
     peronia: '50249177756',
     sacatepequez: '50230692865',
   },
-  // Contenedor de Google Tag Manager (incluye la etiqueta de Google Analytics 4)
-  googleTagManagerId: 'GTM-NWM69TP2',
+  // ID de medición de Google Analytics 4
+  googleAnalyticsId: 'G-3ZP64LMM4N',
   // TODO: reemplazar por la URL real de la página de Facebook
   facebook: '',
   locations: [
