@@ -19,9 +19,13 @@ import radioLogo from 'src/assets/images/radioLogo.jpeg';
 import lesuisseLogo from 'src/assets/images/lesuisseLogo.png';
 import ctaTV from 'src/assets/images/ctaTV.png';
 
+import { whatsappLink } from '~/data/business';
+
 const metadata = {
-  title: 'Cosmovision — Internet y Cable, todo conectado',
+  title: 'Cosmovision — Internet por fibra óptica y Cable TV en Guatemala',
   ignoreTitleTemplate: true,
+  description:
+    'Internet por fibra óptica y cable TV para tu hogar o negocio en Villa Nueva, Ciudad Peronia y Sacatepéquez. Desde Q180 al mes, sin contrato y con instalación gratis.',
 };
 ---
 
@@ -36,8 +40,15 @@ const metadata = {
         href: '/pricing',
         icon: '',
       },
+      {
+        variant: 'whatsapp',
+        text: '¿Hay cobertura en mi zona?',
+        href: whatsappLink('Hola, quiero saber si hay cobertura de Cosmovision en mi zona. Mi dirección es: '),
+        target: '_blank',
+        icon: 'tabler:brand-whatsapp',
+      },
     ]}
-    image={{ src: '~/assets/images/heroR.png', alt: 'Cosmovision Hero Image' }}
+    image={{ src: '~/assets/images/heroR.png', alt: 'Familia conectada con internet de fibra óptica Cosmovision' }}
   >
     <Fragment slot="title">
       Internet y Cable a la
@@ -58,8 +69,8 @@ const metadata = {
   <!-- Brands Widget ******************* -->
 
   <Brands
-    title="Nuestros Socios Cosmicos"
-    subtitle="Nuestro servicio esta impulsado y cuenta con la confianza de estos lideres estelares."
+    title="Nuestros Socios Cósmicos"
+    subtitle="Nuestro servicio está impulsado y cuenta con la confianza de estos líderes estelares."
     images={[
       {
         src: ispLogo,
@@ -108,31 +119,31 @@ const metadata = {
     id="servicios"
     tagline="Nuestros Servicios"
     title="Conexiones que trascienden"
-    subtitle="Nuestra misión es proporcionar una experiencia sin igual, donde cada servicio es una puesta a mundos de posibilidades."
+    subtitle="Nuestra misión es proporcionar una experiencia sin igual, donde cada servicio es una puerta a mundos de posibilidades."
     items={[
       {
         title: 'Internet',
         description:
           'Internet de alta velocidad, confiable y asequible para satisfacer las demandas del mundo digital actual.',
-        icon: 'tabler:brand-tailwind',
+        icon: 'tabler:wifi',
       },
       {
         title: 'Televisión',
         description:
           'Con más de 90 canales disponibles, nuestra oferta de televisión por cable es como un telescopio que te acerca a galaxias de contenido diverso.',
-        icon: 'tabler:components',
+        icon: 'tabler:device-tv',
       },
       {
         title: 'Paquetes combinados',
         description:
-          'Nuestros paquetes de Internet + Cable se alinean con las necesidades...',
-        icon: 'tabler:list-check',
+          'Internet + TV en un solo pago mensual, desde Q199 e incluye hasta 3 televisores.',
+        icon: 'tabler:package',
       },
       {
         title: 'Transporte de datos',
         description:
           'Facilitamos la comunicación entre empresas con soluciones de transporte de datos de alta velocidad y confiabilidad.',
-        icon: 'tabler:rocket',
+        icon: 'tabler:building',
       },
     ]}
   />
@@ -140,42 +151,6 @@ const metadata = {
   <!-- Call to action Cable ********** -->
 
   <Announcement image={ctaTV}/>
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="servicios"
-    tagline="Nuestros Servicios"
-    title="Conexiones que trascienden"
-    subtitle="Nuestra misión es proporcionar una experiencia sin igual, donde cada servicio es una puesta a mundos de posibilidades."
-    items={[
-      {
-        title: 'Internet',
-        description:
-          'Internet de alta velocidad, confiable y asequible para satisfacer las demandas del mundo digital actual.',
-        icon: 'tabler:brand-tailwind',
-      },
-      {
-        title: 'Televisión',
-        description:
-          'Con más de 90 canales disponibles, nuestra oferta de televisión por cable es como un telescopio que te acerca a galaxias de contenido diverso.',
-        icon: 'tabler:components',
-      },
-      {
-        title: 'Paquetes combinados',
-        description:
-          'Nuestros paquetes de Internet + Cable se alinean con las necesidades...',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'Transporte de datos',
-        description:
-          'Facilitamos la comunicación entre empresas con soluciones de transporte de datos de alta velocidad y confiabilidad.',
-        icon: 'tabler:rocket',
-      },
-    ]}
-  />
-  
 
   <!-- Content Widget **************** -->
 
@@ -186,12 +161,12 @@ const metadata = {
       {
         title: 'Conectividad de alta velocidad',
         description:
-          'Nuestra red de fibra optica y microondas garantiza velocidades de internet excepcionales para una experiencia de navegación sin igual.',
+          'Nuestra red de fibra óptica y microondas garantiza velocidades de internet excepcionales para una experiencia de navegación sin igual.',
       },
       {
         title: 'Fiabilidad ininterrumpida',
         description:
-          'Reespaldamos nuestra infraestructura con sistemas de redundancia y monitoreo constante para mantener una conexión confiable en todo momento.',
+          'Respaldamos nuestra infraestructura con sistemas de redundancia y monitoreo constante para mantener una conexión confiable en todo momento.',
       },
       {
         title: 'Soporte técnico especializado',
@@ -201,7 +176,7 @@ const metadata = {
     ]}
     image={{
       src: '~/assets/images/bestO.png',
-      alt: 'Colorful Image',
+      alt: 'Red de fibra óptica Cosmovision',
     }}
   >
     <Fragment slot="content">
@@ -220,22 +195,23 @@ const metadata = {
   <Steps2
       title="Contáctanos"
       callToAction={{
-        text: 'Escribenos',
-        href: 'https://wa.me/50249177756?text=Quiero%20tener%20más%20información%20sobre%20sus%20servicios',
+        text: 'Escríbenos por WhatsApp',
+        href: whatsappLink('Quiero tener más información sobre sus servicios'),
+        target: '_blank',
       }}
       items={[
         {
-          title: 'Llamanos',
+          title: 'Llámanos',
           description: 'PBX: 2375-2111',
           icon: 'tabler:headset',
         },
         {
-          title: 'Escribenos',
-          description: `Ciudad Peronia: 4917-7756 \n Sacatepequez: 3069-2865`,
+          title: 'Escríbenos',
+          description: `Ciudad Peronia: 4917-7756 \n Sacatepéquez: 3069-2865`,
           icon: 'tabler:brand-whatsapp',
         },
         {
-          title: 'Siguenos',
+          title: 'Síguenos',
           description: 'Cosmovision',
           icon: 'tabler:brand-facebook',
         },

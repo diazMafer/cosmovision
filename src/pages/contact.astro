@@ -4,7 +4,9 @@ import ContactUs from '~/components/widgets/Contact.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 
 const metadata = {
-  title: 'Contacto',
+  title: 'Contacto y agencias',
+  description:
+    'Contáctanos por teléfono (PBX 2375-2111), WhatsApp o visita nuestras agencias en Ciudad Peronia, Villa Nueva y San Lucas Sacatepéquez.',
 };
 ---
 
@@ -22,13 +24,21 @@ const metadata = {
         label: 'Nombre',
       },
       {
-        type: 'email',
-        name: 'email',
-        label: 'Email',
+        type: 'tel',
+        name: 'telefono',
+        label: 'Teléfono / WhatsApp',
+        autocomplete: 'tel',
       },
       {
-        type: 'hidden',
-        name: 'nombre',
+        type: 'email',
+        name: 'email',
+        label: 'Correo electrónico',
+        autocomplete: 'email',
+      },
+      {
+        type: 'text',
+        name: 'zona',
+        label: 'Zona o colonia donde quieres el servicio',
       },
     ]}
     textarea={{
@@ -47,7 +57,7 @@ const metadata = {
     items={[
       {
         title: 'Villa Nueva',
-        description: 'Boulevard principal Terrezas, Peronia 502-Villa Nueva, Guatemala',
+        description: 'Boulevard principal Terrazas, Peronia 502-Villa Nueva, Guatemala',
         icon: 'tabler:map-pin',
       },
       {
