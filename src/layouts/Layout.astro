@@ -12,7 +12,7 @@ import SiteVerification from '~/components/common/SiteVerification.astro';
 import Analytics from '~/components/common/Analytics.astro';
 import BasicScripts from '~/components/common/BasicScripts.astro';
 import StructuredData from '~/components/common/StructuredData.astro';
-import GoogleTagManager from '~/components/common/GoogleTagManager.astro';
+import GoogleAnalytics4 from '~/components/common/GoogleAnalytics4.astro';
 
 // Uncomment line below to activate View Transitions
 // import { ViewTransitions } from 'astro:transitions';
@@ -31,7 +31,7 @@ const { language, textDirection } = I18N;
 <!doctype html>
 <html lang={language} dir={textDirection} class="2xl:text-[20px]">
   <head>
-    <GoogleTagManager />
+    <GoogleAnalytics4 />
     <CommonMeta />
     <Favicons />
     <CustomStyles />
@@ -46,7 +46,6 @@ const { language, textDirection } = I18N;
   </head>
 
   <body class="antialiased text-default bg-page tracking-tight">
-    <GoogleTagManager noscript />
     <slot />
 
     <BasicScripts />
