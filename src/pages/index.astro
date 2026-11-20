@@ -1,25 +1,13 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
-import Hero from '~/components/widgets/Hero2.astro';
-import Brands from '~/components/widgets/Brands.astro';
-import Features from '~/components/widgets/Features.astro';
-import Content from '~/components/widgets/Content.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
-import Announcement from '~/components/widgets/Announcement.astro';
-
-import ispLogo from '~/assets/images/ispLogo.png';
-import feLogo from '~/assets/images/feLogo.png';
-import nablaLogo from '~/assets/images/nablaLogo.png';
-import cooitzaLogob from 'src/assets/images/cooitzaLogob.png';
-import sisteguaLogo from 'src/assets/images/sisteguaLogo.png';
-import aseinfoLogo from 'src/assets/images/aseinfoLogo.png';
-import hilcosaLogo from 'src/assets/images/hilcosaLogo.jpeg';
-import radioLogo from 'src/assets/images/radioLogo.jpeg';
-import lesuisseLogo from 'src/assets/images/lesuisseLogo.png';
-import ctaTV from 'src/assets/images/ctaTV.png';
-
-import { whatsappLink } from '~/data/business';
+import Hero from '~/components/cv/Hero.astro';
+import TrustStrip from '~/components/cv/TrustStrip.astro';
+import Plans from '~/components/cv/Plans.astro';
+import Benefits from '~/components/cv/Benefits.astro';
+import Steps from '~/components/cv/Steps.astro';
+import Zones from '~/components/cv/Zones.astro';
+import Faq from '~/components/cv/Faq.astro';
+import CtaBand from '~/components/cv/CtaBand.astro';
 
 const metadata = {
   title: 'Cosmovision — Internet por fibra óptica y Cable TV en Guatemala',
@@ -30,195 +18,12 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
-  <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Explora planes',
-        href: '/planes',
-        icon: '',
-      },
-      {
-        variant: 'whatsapp',
-        text: '¿Hay cobertura en mi zona?',
-        href: whatsappLink('Hola, quiero saber si hay cobertura de Cosmovision en mi zona. Mi dirección es: '),
-        target: '_blank',
-        icon: 'tabler:brand-whatsapp',
-      },
-    ]}
-    image={{ src: '~/assets/images/heroR.png', alt: 'Familia conectada con internet de fibra óptica Cosmovision' }}
-  >
-    <Fragment slot="title">
-      Internet y Cable a la
-      <span class="text-accent "> Velocidad</span> de la luz
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        Descubre la velocidad supersónica en cada conexión con nuestros servicios de 
-        internet y cable. Navega, juega y comunícate sin límites.
-        </span
-      >
-      Vive una experiencia digital sin precedentes, perfecta para toda la familia y amigos que 
-      quieren más de cada momento en línea.
-    </Fragment>
-  </Hero>
-
-  <!-- Brands Widget ******************* -->
-
-  <Brands
-    title="Nuestros Socios Cósmicos"
-    subtitle="Nuestro servicio está impulsado y cuenta con la confianza de estos líderes estelares."
-    images={[
-      {
-        src: ispLogo,
-        alt: 'ISP Logo',
-      },
-      {
-        src: feLogo,
-        alt: 'Fe y Alegria Logo',
-      },
-      {
-        src: nablaLogo,
-        alt: 'Nabla Logo'
-      },
-      {
-        src: cooitzaLogob,
-        alt: 'Cooitza Logo'
-      },
-      {
-        src: sisteguaLogo,
-        alt: 'Sistegua Logo'
-      },
-      {
-        src: aseinfoLogo,
-        alt: 'Aseinfo Logo'
-      },
-      {
-        src: hilcosaLogo,
-        alt: 'Hilcosa Logo',
-      },
-      {
-        src: radioLogo,
-        alt:  'Radio Logo',
-      },
-      {
-        src: lesuisseLogo,
-        alt: 'LeSuisse Logo',
-      },
-      
-    ]}
-  >
-  </Brands>  
-
-  <!-- Features Widget *************** -->
-
-  <Features
-    id="servicios"
-    tagline="Nuestros Servicios"
-    title="Conexiones que trascienden"
-    subtitle="Nuestra misión es proporcionar una experiencia sin igual, donde cada servicio es una puerta a mundos de posibilidades."
-    items={[
-      {
-        title: 'Internet',
-        description:
-          'Internet de alta velocidad, confiable y asequible para satisfacer las demandas del mundo digital actual.',
-        icon: 'tabler:wifi',
-      },
-      {
-        title: 'Televisión',
-        description:
-          'Con más de 90 canales disponibles, nuestra oferta de televisión por cable es como un telescopio que te acerca a galaxias de contenido diverso.',
-        icon: 'tabler:device-tv',
-      },
-      {
-        title: 'Paquetes combinados',
-        description:
-          'Internet + TV en un solo pago mensual, desde Q199 e incluye hasta 3 televisores.',
-        icon: 'tabler:package',
-      },
-      {
-        title: 'Transporte de datos',
-        description:
-          'Facilitamos la comunicación entre empresas con soluciones de transporte de datos de alta velocidad y confiabilidad.',
-        icon: 'tabler:building',
-      },
-    ]}
-  />
-
-  <!-- Call to action Cable ********** -->
-
-  <Announcement image={ctaTV}/>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    title="Descubre por qué somos la mejor opción"
-    items={[
-      {
-        title: 'Conectividad de alta velocidad',
-        description:
-          'Nuestra red de fibra óptica y microondas garantiza velocidades de internet excepcionales para una experiencia de navegación sin igual.',
-      },
-      {
-        title: 'Fiabilidad ininterrumpida',
-        description:
-          'Respaldamos nuestra infraestructura con sistemas de redundancia y monitoreo constante para mantener una conexión confiable en todo momento.',
-      },
-      {
-        title: 'Soporte técnico especializado',
-        description:
-          'Nuestro equipo de expertos está disponible para brindar asistencia inmediata en caso de cualquier problema.',
-      },
-    ]}
-    image={{
-      src: '~/assets/images/bestO.png',
-      alt: 'Red de fibra óptica Cosmovision',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Conéctate con el Futuro</h3>
-       Con una conexión inspirada en la velocidad y la vastedad del cosmos
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps2 Widget ****************** -->
-
-  
-  <Steps2
-      title="Contáctanos"
-      callToAction={{
-        text: 'Escríbenos por WhatsApp',
-        href: whatsappLink('Quiero tener más información sobre sus servicios'),
-        target: '_blank',
-      }}
-      items={[
-        {
-          title: 'Llámanos',
-          description: 'PBX: 2375-2111',
-          icon: 'tabler:headset',
-        },
-        {
-          title: 'Escríbenos',
-          description: `Ciudad Peronia: 4917-7756 \n Sacatepéquez: 3069-2865`,
-          icon: 'tabler:brand-whatsapp',
-        },
-        {
-          title: 'Síguenos',
-          description: 'Cosmovision',
-          icon: 'tabler:brand-facebook',
-        },
-      ]}
-    />
-
-  
-  
-
+  <Hero />
+  <TrustStrip />
+  <Plans />
+  <Benefits />
+  <Steps />
+  <Zones />
+  <Faq limit={4} showMoreLink />
+  <CtaBand />
 </Layout>

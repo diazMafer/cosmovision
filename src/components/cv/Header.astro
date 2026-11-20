@@ -1,0 +1,62 @@
+---
+import { Image } from 'astro:assets';
+import logo from '~/assets/images/logoP.png';
+import { headerData } from '~/navigation';
+
+const links = headerData.links.filter((l) => l.href !== '/');
+const current = Astro.url.pathname.replace(/\/$/, '') || '/';
+---
+
+<header class="sticky top-0 z-40 bg-white/95 backdrop-blur border-b border-cv-line">
+  <nav class="max-w-[1200px] mx-auto px-4 sm:px-6 py-3 flex items-center justify-between gap-4" aria-label="Principal">
+    <a href="/" class="flex items-center shrink-0" aria-label="Cosmovision, inicio">
+      <Image src={logo} alt="Cosmovision" width={190} height={52} class="h-8 sm:h-9 w-auto" loading="eager" />
+    </a>
+
+    <!-- Escritorio -->
+    <div class="hidden md:flex items-center gap-7 font-semibold text-[15px]">
+      {
+        links.map((l) => (
+          <a
+            href={l.href}
+            class:list={['text-cv-navy hover:text-cv-electric transition', current === l.href && 'text-cv-electric']}
+            aria-current={current === l.href ? 'page' : undefined}
+          >
+            {l.text}
+          </a>
+        ))
+      }
+      <a
+        href="/#cobertura"
+        class="inline-flex items-center min-h-[44px] px-5 rounded-full bg-cv-electric text-white font-bold hover:bg-cv-blue transition"
+        >Verificar cobertura</a
+      >
+    </div>
+
+    <!-- Móvil -->
+    <details class="md:hidden relative group">
+      <summary
+        class="list-none cursor-pointer flex items-center justify-center w-11 h-11 rounded-full border border-cv-line text-cv-navy"
+        aria-label="Abrir menú"
+      >
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </summary>
+      <div class="absolute right-0 mt-2 w-64 rounded-2xl bg-white border border-cv-line shadow-xl p-3 flex flex-col">
+        {
+          links.map((l) => (
+            <a href={l.href} class="px-3 py-3 rounded-xl font-semibold text-cv-navy hover:bg-cv-bg">
+              {l.text}
+            </a>
+          ))
+        }
+        <a href="/#cobertura" class="mt-2 text-center px-4 py-3 rounded-full bg-cv-electric text-white font-bold">Verificar cobertura</a>
+      </div>
+    </details>
+  </nav>
+</header>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

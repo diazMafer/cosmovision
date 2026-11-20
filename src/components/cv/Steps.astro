@@ -1,0 +1,30 @@
+---
+const steps = [
+  { n: '1', title: 'Escríbenos', text: 'Por WhatsApp o al PBX. Nos dices tu zona y qué plan te interesa.' },
+  { n: '2', title: 'Verificamos', text: 'Revisamos que la fibra llegue a tu dirección y agendamos la visita.' },
+  { n: '3', title: 'Instalamos gratis', text: 'Nuestro técnico llega, instala el equipo y prueba que todo funcione.' },
+  { n: '4', title: 'A navegar', text: 'Listo. Pagas cada mes entre el 1 y el 5, sin sorpresas.' },
+];
+---
+
+<section id="como-funciona" class="bg-white px-4 sm:px-6 py-20 md:py-24 scroll-mt-20">
+  <div class="max-w-[1200px] mx-auto flex flex-col gap-10">
+    <div class="flex flex-col gap-3 max-w-[640px]">
+      <h2 class="m-0 font-black text-[clamp(32px,4vw,48px)] leading-[1.08] text-cv-blue">Conectarte es así de fácil</h2>
+      <p class="m-0 text-lg text-cv-text font-medium leading-relaxed">Cuatro pasos y ninguno incluye hacer fila.</p>
+    </div>
+    <ol class="m-0 p-0 list-none flex flex-wrap gap-5">
+      {
+        steps.map((s) => (
+          <li class="flex-[1_1_240px] bg-cv-bg rounded-3xl p-7 flex flex-col gap-3.5">
+            <span class="w-[52px] h-[52px] rounded-2xl bg-cv-orange text-cv-navy font-black text-2xl flex items-center justify-center">
+              {s.n}
+            </span>
+            <h3 class="m-0 font-extrabold text-[22px] text-cv-blue">{s.title}</h3>
+            <p class="m-0 text-[15px] leading-relaxed text-cv-text font-medium">{s.text}</p>
+          </li>
+        ))
+      }
+    </ol>
+  </div>
+</section>

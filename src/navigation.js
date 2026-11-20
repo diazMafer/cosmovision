@@ -45,7 +45,7 @@ export const footerData = {
     {
       title: 'Contacto',
       links: [
-        { text: 'PBX: 2375-2111', href: 'tel:+50223752111' },
+        { text: 'PBX: 2376-4646', href: 'tel:+50223764646' },
         { text: 'WhatsApp Ciudad Peronia: 4917-7756', href: 'https://wa.me/50249177756', target: '_blank' },
         { text: 'WhatsApp Sacatepéquez: 3069-2865', href: 'https://wa.me/50230692865', target: '_blank' },
         { text: 'info@cosmovisiongt.com', href: 'mailto:info@cosmovisiongt.com', target: "_blank" },
