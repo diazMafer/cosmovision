@@ -1,0 +1,46 @@
+---
+import { FAQS } from '~/data/plans';
+
+export interface Props {
+  limit?: number;
+  showMoreLink?: boolean;
+}
+
+const { limit, showMoreLink = false } = Astro.props;
+const items = limit ? FAQS.slice(0, limit) : FAQS;
+---
+
+<section id="preguntas-frecuentes" class="bg-white px-4 sm:px-6 py-20 md:py-24 scroll-mt-20">
+  <div class="max-w-[860px] mx-auto flex flex-col gap-8">
+    <h2 class="m-0 font-black text-[clamp(32px,4vw,48px)] leading-[1.08] text-cv-blue">Preguntas frecuentes</h2>
+    <div class="flex flex-col gap-3">
+      {
+        items.map((f, i) => (
+          <details class="group bg-cv-bg rounded-[18px] overflow-hidden" open={i === 0}>
+            <summary class="list-none cursor-pointer min-h-[64px] flex items-center justify-between gap-4 px-6 py-4 text-[17px] font-bold text-cv-navy">
+              <span>{f.q}</span>
+              <span class="shrink-0 w-8 h-8 rounded-full bg-white text-cv-blue flex items-center justify-center text-xl font-extrabold">
+                <span class="group-open:hidden">+</span>
+                <span class="hidden group-open:inline">−</span>
+              </span>
+            </summary>
+            <p class="m-0 px-6 pb-5 text-base leading-relaxed text-cv-text font-medium">{f.a}</p>
+          </details>
+        ))
+      }
+    </div>
+    {
+      showMoreLink && (
+        <a href="/planes#preguntas-frecuentes" class="self-start font-bold text-cv-electric hover:text-cv-blue">
+          Ver todas las preguntas →
+        </a>
+      )
+    }
+  </div>
+</section>
+
+<style>
+  summary::-webkit-details-marker {
+    display: none;
+  }
+</style>

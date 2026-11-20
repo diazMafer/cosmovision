@@ -1,0 +1,167 @@
+---
+import { PLANES_INTERNET, PLANES_TV, PRECIO_SOLO_TV, type Plan } from '~/data/plans';
+import { whatsappLink } from '~/data/business';
+
+export interface Props {
+  title?: string;
+  subtitle?: string;
+  headingLevel?: 'h1' | 'h2';
+}
+
+const {
+  title = 'Elige tu plan. Sin letra pequeña.',
+  subtitle = 'Precio fijo cada mes, instalación gratis y sin contrato obligatorio.',
+  headingLevel = 'h2',
+} = Astro.props;
+const Heading = headingLevel;
+
+const panels: { id: string; label: string; plans: Plan[] }[] = [
+  { id: 'tv', label: 'Internet + TV', plans: PLANES_TV },
+  { id: 'internet', label: 'Solo Internet', plans: PLANES_INTERNET },
+];
+
+const href = (p: Plan) =>
+  whatsappLink(`Hola, me interesa el plan ${p.name} de ${p.megas} Megas. ¿Hay cobertura en mi zona?`);
+---
+
+<section id="planes" class="px-4 sm:px-6 py-20 md:py-24 scroll-mt-20">
+  <div class="max-w-[1200px] mx-auto flex flex-col gap-9">
+    <div class="flex flex-wrap items-end justify-between gap-6">
+      <div class="flex flex-col gap-3 max-w-[640px]">
+        <Heading class="m-0 font-black text-[clamp(32px,4vw,48px)] leading-[1.08] text-cv-blue">{title}</Heading>
+        <p class="m-0 text-lg text-cv-text font-medium leading-relaxed">{subtitle}</p>
+      </div>
+      <div
+        role="tablist"
+        aria-label="Tipo de plan"
+        class="inline-flex bg-white border border-[#DCE2F0] rounded-full p-1.5 gap-1"
+        data-plan-tabs
+      >
+        {
+          panels.map((panel, i) => (
+            <button
+              type="button"
+              role="tab"
+              id={`tab-${panel.id}`}
+              aria-controls={`panel-${panel.id}`}
+              aria-selected={i === 0 ? 'true' : 'false'}
+              class="min-h-[44px] px-5 rounded-full font-bold text-[15px] transition aria-selected:bg-cv-blue aria-selected:text-white text-cv-text"
+            >
+              {panel.label}
+            </button>
+          ))
+        }
+      </div>
+    </div>
+
+    {
+      panels.map((panel, i) => (
+        <div
+          id={`panel-${panel.id}`}
+          role="tabpanel"
+          aria-labelledby={`tab-${panel.id}`}
+          class="flex flex-wrap gap-6 items-stretch"
+          hidden={i !== 0}
+        >
+          {panel.plans.map((p) => (
+            <article
+              class:list={[
+                'flex-[1_1_300px] min-w-0 rounded-[28px] p-8 flex flex-col gap-5',
+                p.popular
+                  ? 'bg-cv-blue text-white shadow-[0_24px_48px_rgba(3,48,147,0.28)]'
+                  : 'bg-white text-cv-blue border border-[#DCE2F0]',
+              ]}
+            >
+              {p.popular && (
+                <span class="self-start bg-cv-orange text-cv-navy font-extrabold text-[13px] px-3 py-1.5 rounded-full">
+                  El más elegido
+                </span>
+              )}
+              <div class="flex flex-col gap-1">
+                <span
+                  class:list={[
+                    'font-extrabold text-[13px] uppercase tracking-[0.06em]',
+                    p.popular ? 'text-[#FFC08A]' : 'text-cv-muted',
+                  ]}
+                >
+                  {p.label}
+                </span>
+                <h3 class="m-0 font-extrabold text-[26px]">{p.name}</h3>
+              </div>
+              <div class="flex items-baseline gap-2">
+                <span class="font-black text-[64px] leading-none">{p.megas}</span>
+                <span class="font-extrabold text-lg">Megas</span>
+              </div>
+              <p class:list={['m-0 text-base leading-relaxed font-medium', p.popular ? 'text-[#D6DEF7]' : 'text-cv-text']}>
+                {p.description}
+              </p>
+              <ul class="m-0 p-0 list-none flex flex-col gap-2.5 text-[15px] font-semibold">
+                {p.items.map((item) => (
+                  <li class="flex gap-2.5 items-start">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" class="shrink-0 mt-px">
+                      <path d="M5 12l5 5L20 7" />
+                    </svg>
+                    <span>{item}</span>
+                  </li>
+                ))}
+              </ul>
+              <div class="mt-auto flex flex-col gap-4">
+                <div class="flex items-baseline gap-1.5">
+                  <span class="font-extrabold text-[22px]">Q</span>
+                  <span class="font-black text-[44px] leading-none">{p.price}</span>
+                  <span class="text-base font-semibold">/mes</span>
+                </div>
+                <a
+                  href={href(p)}
+                  target="_blank"
+                  rel="noopener"
+                  class:list={[
+                    'flex items-center justify-center min-h-[52px] rounded-[14px] font-extrabold text-[17px] no-underline transition',
+                    p.popular ? 'bg-cv-orange text-cv-navy hover:brightness-95' : 'bg-cv-electric text-white hover:bg-cv-blue',
+                  ]}
+                >
+                  Lo quiero
+                </a>
+              </div>
+            </article>
+          ))}
+        </div>
+      ))
+    }
+
+    <div class="flex flex-wrap justify-center gap-3">
+      <span
+        class="inline-flex items-center font-bold text-base text-cv-navy bg-white border border-[#DCE2F0] px-5 py-3.5 rounded-full min-h-[44px]"
+        >¿Solo cable? Planes de TV desde Q{PRECIO_SOLO_TV} al mes</span
+      >
+    </div>
+    <p class="m-0 text-center text-[13px] text-cv-muted font-medium">
+      Precios pueden variar por zona. Cobertura sujeta a disponibilidad técnica. Velocidad puede variar según condiciones
+      técnicas. Aplican términos y condiciones.
+    </p>
+  </div>
+</section>
+
+<script>
+  document.querySelectorAll<HTMLElement>('[data-plan-tabs]').forEach((list) => {
+    const tabs = Array.from(list.querySelectorAll<HTMLButtonElement>('[role="tab"]'));
+    const select = (tab: HTMLButtonElement) => {
+      tabs.forEach((t) => {
+        const on = t === tab;
+        t.setAttribute('aria-selected', on ? 'true' : 'false');
+        const panel = document.getElementById(t.getAttribute('aria-controls') || '');
+        if (panel) panel.hidden = !on;
+      });
+    };
+    tabs.forEach((t, i) => {
+      t.addEventListener('click', () => select(t));
+      t.addEventListener('keydown', (e) => {
+        if (e.key === 'ArrowRight' || e.key === 'ArrowLeft') {
+          const next = tabs[(i + (e.key === 'ArrowRight' ? 1 : tabs.length - 1)) % tabs.length];
+          select(next);
+          next.focus();
+        }
+      });
+    });
+  });
+</script>
