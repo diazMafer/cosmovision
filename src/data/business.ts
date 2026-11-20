@@ -3,7 +3,7 @@ export const BUSINESS = {
   name: 'Cosmovision',
   url: 'https://cosmovisiongt.com',
   email: 'info@cosmovisiongt.com',
-  phone: '+502 2375-2111',
+  phone: '+502 2376-4646',
   whatsapp: {
     peronia: '50249177756',
     sacatepequez: '50230692865',
