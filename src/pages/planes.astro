@@ -1,239 +1,27 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import HeroText from '~/components/widgets/HeroText.astro';
-import Prices from '~/components/widgets/Pricing.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Tabs from '~/components/widgets/Tabs.astro';
-
-import { whatsappLink } from '~/data/business';
+import Plans from '~/components/cv/Plans.astro';
+import Steps from '~/components/cv/Steps.astro';
+import Faq from '~/components/cv/Faq.astro';
+import CtaBand from '~/components/cv/CtaBand.astro';
+import { faqSchema } from '~/data/plans';
 
 const metadata = {
   title: 'Planes de Internet y TV por fibra óptica en Guatemala',
   description:
     'Planes de internet por fibra óptica desde Q180 al mes y paquetes Internet + TV desde Q199. Sin contrato y sin costo de instalación en Villa Nueva, Ciudad Peronia y Sacatepéquez.',
 };
-
-const contratar = (plan: string) => ({
-  text: 'Lo quiero',
-  href: whatsappLink(`Hola, me interesa contratar el ${plan}. ¿Hay cobertura en mi zona?`),
-  target: '_blank',
-});
-
-const faqs = [
-  { title: '¿Cuándo debo pagar mi servicio?', description: 'Entre el 1 y el 5 de cada mes.' },
-  {
-    title: '¿Qué pasa si pago después del 5?',
-    description:
-      'Tu servicio se suspenderá el día 10 (o, por motivos operativos, a más tardar el 20). No se aplican recargos por mora, pero permanecerás sin servicio hasta pagar tu saldo pendiente completo.',
-  },
-  {
-    title: '¿Cómo pido reconexión si me cortaron?',
-    description:
-      'Cancela el saldo vencido más la tarifa de reconexión. El restablecimiento toma de 3 a 5 días hábiles tras confirmar el pago.',
-  },
-  {
-    title: '¿Qué pasa con el equipo si cancelo el servicio?',
-    description: 'Debes devolver la ONU/router y los cables en buen estado. Si no lo haces, se factura su valor comercial.',
-  },
-  {
-    title: '¿Puedo cambiar de plan?',
-    description: 'Puedes cambiar a planes de igual o mayor precio en cualquier momento, sujeto a viabilidad técnica.',
-  },
-  {
-    title: '¿Qué pasa si quiero cambiar de dirección?',
-    description:
-      'Sí se puede. Debes trasladar tu router/ONU al nuevo domicilio y pagar una tarifa de Q50 por el servicio de cambio de dirección.',
-  },
-];
-
-const faqSchema = {
-  '@context': 'https://schema.org',
-  '@type': 'FAQPage',
-  mainEntity: faqs.map((f) => ({
-    '@type': 'Question',
-    name: f.title,
-    acceptedAnswer: { '@type': 'Answer', text: f.description },
-  })),
-};
 ---
 
 <Layout metadata={metadata} structuredData={[faqSchema]}>
-  <!-- HeroText Widget ******************* -->
-
-  <HeroText
-    tagline="Servicio Internet"
-    subtitle="Explora nuestros planes diseñados para adaptarse a cada necesidad y estilo de vida."
-  >
-    <Fragment slot="title">
-      Selecciona el plan 
-      <span class="text-accent-orange dark:text-white highlight"> perfecto para ti </span>
-    </Fragment>
-  </HeroText>
-
-  <!-- Tabs Widget ******************* -->
-  <Tabs>
-    <Fragment slot='tab-1'>TV + Internet</Fragment>
-    <Fragment slot='tab-2'>Internet</Fragment>
-
-    <Prices
-      slot='panel-1'
-      cols="3"
-      prices={[
-        {
-          title: 'Conexión por Fibra Óptica',
-          subtitle: 'PLAN BASICO',
-          megas: 80,
-          price: 199,
-          capacity: 'MEGAS',
-          period: ' /al mes',
-          callToAction: contratar('Plan Básico 80 Mb + TV'),
-          items: [
-            { description: 'Ideal para familias y teletrabajadores', },
-            { description: 'Sin costo de instalación', },
-            { description: 'Sin contrato', },
-            { description: 'Incluye 3 televisores*', },
-          ],
-          hasRibbon: true,
-          ribbonTitle: 'Popular',
-        },
-        {
-          title: 'Conexión por Fibra Óptica',
-          subtitle: 'PLAN FAMILIAR',
-          megas: 125,
-          price: 249,
-          capacity: 'MEGAS',
-          period: ' /al mes',
-          callToAction: contratar('Plan Familiar 125 Mb + TV'),
-          items: [
-            { description: 'Ideal para hogares con múltiples dispositivos conectados', },
-            { description: 'Sin costo de instalación', },
-            { description: 'Sin contrato', },
-            { description: 'Incluye 3 televisores*', },
-          ],
-          
-        },
-        {
-          title: 'Conexión por Fibra Óptica',
-          subtitle: 'PLAN GAMER',
-          megas: 200,
-          price: 299,
-          capacity: 'MEGAS',
-          period: ' /al mes',
-          callToAction: contratar('Plan Gamer 200 Mb + TV'),
-          items: [
-            { description: 'Ideal para gamers u hogares con múltiples dispositivos', },
-            { description: 'Sin costo de instalación', },
-            { description: 'Sin contrato', },
-            { description: 'Incluye 3 televisores*', },
-          ],
-        },
-      ]}
+  <div class="bg-white">
+    <Plans
+      headingLevel="h1"
+      title="Planes de internet por fibra óptica"
+      subtitle="Elige solo internet o internet + TV con más de 90 canales. Precio fijo, instalación gratis y sin contrato."
     />
-
-    <Prices
-      slot='panel-2'
-      cols="3"
-      prices={[
-        {
-          title: 'Conexión por fibra óptica',
-          subtitle: 'PLAN BÁSICO',
-          megas: 80,
-          capacity: 'MEGAS',
-          price: 180,
-          period: ' /al mes',
-          callToAction: contratar('Plan Básico 80 Mb'),
-          items: [
-            { description: 'Ideal para navegación basica', },
-            { description: 'Sin costo de instalación', },
-            { description: 'Sin contrato', },
-          ],
-          hasRibbon: true,
-          ribbonTitle: 'popular',
-        },
-        {
-          title: 'Conexión por fibra óptica',
-          subtitle: 'PLAN FAMILIAR',
-          megas: 125,
-          price: 230,
-          capacity: 'MEGAS',
-          period: ' /al mes',
-          callToAction: contratar('Plan Familiar 125 Mb'),
-          items: [
-            { description: 'Ideal para familias y teletrabajadores', },
-            { description: 'Sin costo de instalación', },
-            { description: 'Sin contrato', },
-          ],
-        },
-        {
-          title: 'Conexión por fibra óptica',
-          subtitle: 'PLAN AVANZADO',
-          megas: 200,
-          capacity: 'MEGAS',
-          price: 280,
-          period: ' /al mes',
-          callToAction: contratar('Plan Avanzado 200 Mb'),
-          items: [
-            { description: 'Ideal para hogares con múltiples dispositivos conectados', },
-            { description: 'Sin costo de instalación', },
-            { description: 'Sin contrato', },
-          ],
-        },
-      ]}
-    />
-
-  </Tabs>
-
-  <section class="bg-blue-50 dark:bg-slate-800 not-prose">
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 py-4 text-md text-center font-medium">
-      Precios pueden variar por zona. Cobertura sujeta a disponibilidad técnica. <b> Sin contrato obligatorio. </b>
-     Aplican términos y condiciones. Velocidad puede variar según condiciones técnicas.
-    </div>
-  </section>
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="Conéctate al Universo"
-    subtitle="Descubre las ventajas de contratar nuestros planes"
-    columns={2}
-    items={[
-      {
-        title: 'Velocidad ',
-        description: 'Navega a velocidades que desafían las estrellas. Perfecto para streaming, juegos, y mucho más, sin interrupciones.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Confiabilidad ',
-        description: ' Con nuestra tecnología avanzada, aseguramos una conexión estable que está contigo en todo momento.',
-        icon: 'tabler:stars-filled',
-      },
-      {
-        title: 'Soporte Técnico',
-        description: 'Nuestros expertos están siempre listos para ayudarte, garantizando que tu experiencia sea siempre óptima.',
-        icon: 'tabler:tools',
-      },
-      {
-        title: 'Planes Flexibles',
-        description: `Adaptamos nuestras ofertas a tus necesidades. Con nosotros, tienes el poder de elegir y personalizar tu experiencia en línea.`,
-        icon: 'tabler:router',
-      },
-    ]}
-    classes={{ container: 'max-w-5xl' }}
-  />
-
-   <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    id="preguntas-frecuentes"
-    title="Preguntas Frecuentes"
-    items={faqs.map((f) => ({ ...f, icon: 'tabler:chevrons-right' }))}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </FAQs>
-
-
-
+  </div>
+  <Steps />
+  <Faq />
+  <CtaBand />
 </Layout>

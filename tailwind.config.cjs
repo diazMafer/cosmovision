@@ -10,6 +10,20 @@ module.exports = {
         accent: 'var(--aw-color-accent)',
         default: 'var(--aw-color-text-default)',
         muted: 'var(--aw-color-text-muted)',
+        // Paleta Cosmovision (manual de marca + trifolear)
+        cv: {
+          navy: '#000D37',
+          blue: '#033093',
+          electric: '#0028CE',
+          orange: '#FF7500',
+          'orange-soft': '#FFA94A',
+          green: '#1FA855',
+          bg: '#F4F6FB',
+          sky: '#E4EAFB',
+          line: '#E1E6F2',
+          text: '#3A4568',
+          muted: '#4E5878',
+        },
       },
       fontFamily: {
         sans: ['var(--aw-font-secondary)', ...defaultTheme.fontFamily.sans],

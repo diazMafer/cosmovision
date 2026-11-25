@@ -1,0 +1,21 @@
+---
+import WhatsAppIcon from './WhatsAppIcon.astro';
+import { whatsappLink } from '~/data/business';
+---
+
+<section class="bg-cv-blue px-4 sm:px-6 py-20 md:py-[88px]">
+  <div class="max-w-[1200px] mx-auto flex flex-wrap items-center justify-between gap-8">
+    <h2 class="m-0 flex-[1_1_520px] font-black text-[clamp(32px,4.4vw,56px)] leading-[1.05] text-white">
+      Tu internet nuevo está <span class="text-cv-orange">a un mensaje</span> de distancia.
+    </h2>
+    <a
+      href={whatsappLink('Hola, quiero contratar Cosmovision')}
+      target="_blank"
+      rel="noopener"
+      class="inline-flex items-center gap-3 bg-cv-green text-white no-underline font-extrabold text-lg px-7 py-4 rounded-full min-h-[56px] hover:brightness-95 transition"
+    >
+      <WhatsAppIcon />
+      Escríbenos por WhatsApp
+    </a>
+  </div>
+</section>

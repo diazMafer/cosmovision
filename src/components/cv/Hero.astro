@@ -1,0 +1,93 @@
+---
+import Isotipo from './Isotipo.astro';
+import WhatsAppIcon from './WhatsAppIcon.astro';
+import { BUSINESS, whatsappLink } from '~/data/business';
+
+const fallback = whatsappLink('Hola, quiero saber si hay cobertura de Cosmovision en mi zona.');
+---
+
+<section id="inicio" class="bg-white">
+  <div class="max-w-[1200px] mx-auto px-4 sm:px-6 pt-12 pb-16 md:pt-[72px] md:pb-[88px] flex flex-wrap items-center gap-14">
+    <div class="flex-[1_1_520px] min-w-0 flex flex-col gap-6">
+      <div class="flex flex-wrap gap-2">
+        <span class="bg-cv-blue text-white font-bold text-[13px] px-3.5 py-2 rounded-full">Fibra óptica de alta velocidad</span>
+        <span class="bg-cv-blue text-white font-bold text-[13px] px-3.5 py-2 rounded-full">Sin contrato</span>
+        <span class="bg-cv-blue text-white font-bold text-[13px] px-3.5 py-2 rounded-full">Sin costo de instalación</span>
+      </div>
+      <h1 class="m-0 font-black text-[clamp(40px,5.6vw,72px)] leading-[1.02] tracking-[-0.02em] text-cv-blue">
+        Internet de fibra que sí llega a tu <span class="text-cv-orange">colonia.</span>
+      </h1>
+      <p class="m-0 text-lg sm:text-xl leading-relaxed text-cv-text font-medium max-w-[560px]">
+        Planes desde <strong class="text-cv-navy">Q180 al mes</strong>. Sin contrato, sin costo de instalación y con
+        soporte de gente de aquí.
+      </p>
+
+      <form
+        id="cobertura"
+        class="mt-2 bg-cv-bg border border-[#DCE2F0] rounded-[20px] p-5 flex flex-col gap-3 max-w-[560px] scroll-mt-24"
+        data-wa-number={BUSINESS.whatsapp.sacatepequez}
+        action={fallback}
+        method="get"
+        target="_blank"
+      >
+        <label for="zona" class="font-extrabold text-base text-cv-navy">¿Llega Cosmovision a tu casa?</label>
+        <div class="flex flex-wrap gap-2.5">
+          <input
+            id="zona"
+            name="zona"
+            type="text"
+            autocomplete="address-level3"
+            placeholder="Escribe tu colonia o zona"
+            class="flex-[1_1_240px] min-w-0 min-h-[52px] border border-[#C6CFE4] rounded-xl px-4 text-base bg-white text-cv-navy"
+          />
+          <button
+            type="submit"
+            class="min-h-[52px] inline-flex items-center gap-2.5 bg-cv-green text-white font-extrabold text-lg px-5 rounded-xl hover:brightness-95 transition"
+          >
+            <WhatsAppIcon />
+            Verificar por WhatsApp
+          </button>
+        </div>
+        <span class="text-sm text-cv-muted font-medium">Te respondemos por WhatsApp al 3069-2865.</span>
+      </form>
+    </div>
+
+    <div class="flex-[1_1_380px] min-w-0 flex justify-center">
+      <div class="relative w-full max-w-[440px] aspect-square">
+        <Isotipo class="w-full h-full block" />
+        <div
+          class="absolute top-[6%] -left-[4%] bg-white border border-cv-line rounded-2xl px-4 py-3 shadow-[0_12px_30px_rgba(0,13,55,0.12)] flex flex-col"
+        >
+          <span class="font-black text-[28px] text-cv-blue leading-none">200 Megas</span>
+          <span class="text-[13px] text-cv-muted font-semibold">para el gamer de la casa</span>
+        </div>
+        <div
+          class="absolute bottom-[12%] -right-[2%] bg-cv-navy text-white rounded-2xl px-4 py-3 shadow-[0_12px_30px_rgba(0,13,55,0.25)] font-extrabold text-[15px]"
+        >
+          Sin contrato. En serio.
+        </div>
+        <div
+          class="absolute -bottom-[2%] left-[4%] bg-white border border-cv-line rounded-full px-4 py-2.5 shadow-[0_12px_30px_rgba(0,13,55,0.12)] font-extrabold text-sm text-cv-navy"
+        >
+          +90 canales de TV
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Envía la zona escrita como parte del mensaje de WhatsApp.
+  const form = document.getElementById('cobertura') as HTMLFormElement | null;
+  form?.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const zona = (form.querySelector('#zona') as HTMLInputElement)?.value.trim();
+    const msg = zona
+      ? `Hola, quiero saber si hay cobertura de Cosmovision en mi zona: ${zona}`
+      : 'Hola, quiero saber si hay cobertura de Cosmovision en mi zona.';
+    const url = `https://wa.me/${form.dataset.waNumber}?text=${encodeURIComponent(msg)}`;
+    const w = window as unknown as { gtag?: (...args: unknown[]) => void };
+    w.gtag?.('event', 'whatsapp_click', { boton: 'Verificar cobertura', plan: '(sin plan)', pagina: location.pathname });
+    window.open(url, '_blank', 'noopener');
+  });
+</script>
